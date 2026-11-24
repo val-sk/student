@@ -1,0 +1,1431 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Литера — ЕГЭ по литературе 2026/27: вузы, профессии, задания и кодификатор</title>
+<meta name="description" content="Светлый навигатор по ЕГЭ по литературе в сезоне 2026–2027: зачем сдавать, где нужен предмет, какие профессии открываются, тренировочные задания и примеры произведений из кодификатора с иллюстрациями и портретами авторов.">
+<meta name="theme-color" content="#fbfaf6">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#fbfaf6;--surface:#ffffff;--overlay:rgba(251,250,246,.86);--scrim:rgba(36,53,44,.38);
+  --ink:#24352c;--muted:#5d6f64;--line:#dfe7df;--line-strong:#c9d8cc;
+  --sage:#4f715d;--sage-deep:#355443;--mint:#e7f0e8;--mint-2:#d6e6da;
+  --butter:#f7e9b7;--peach:#f6d9c8;--lav:#e6dff3;--sky:#dcebf0;--rose:#f2d9df;
+  --success:#3f7d58;--warning:#9a6b1f;--danger:#a64b4b;--info:#3d6b86;
+  --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --shadow:0 18px 50px rgba(53,84,67,.10);--shadow-sm:0 8px 24px rgba(53,84,67,.08);
+  --radius:24px;--header:76px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--header) + 18px)}
+body{margin:0;font-family:var(--sans);color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.055'/%3E%3C/svg%3E")}
+body.no-scroll{overflow:hidden}
+::selection{background:var(--mint-2);color:var(--sage-deep)}
+*{scrollbar-width:thin;scrollbar-color:var(--sage) var(--mint)}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-track{background:var(--mint);border-radius:99px}
+::-webkit-scrollbar-thumb{background:var(--sage);border-radius:99px;border:2px solid var(--mint)}
+::-webkit-scrollbar-thumb:hover{background:var(--sage-deep)}
+img,svg{display:block;max-width:100}
+a{color:inherit}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+h1,h2,h3,h4{font-family:var(--serif);line-height:1.05;margin:0;font-weight:600;letter-spacing:-.01em}
+p{margin:0}
+.container{width:min(1200px,calc(100% - 40px));margin-inline:auto;position:relative;z-index:1}
+.section{padding:96px 0;position:relative}
+.section-head{max-width:760px;margin-bottom:38px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);margin-bottom:14px}
+.eyebrow::before{content:"";width:26px;height:2px;background:var(--sage);border-radius:2px}
+.section h2{font-size:clamp(2.1rem,4.2vw,3.4rem);margin-bottom:14px}
+.lead{color:var(--muted);font-size:1.05rem;max-width:68ch}
+.icon{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon.fill{fill:currentColor;stroke:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:999px;padding:13px 22px;font-weight:700;font-size:.95rem;text-decoration:none;transition:transform .18s ease,box-shadow .18s ease,background .18s ease,border-color .18s ease;white-space:nowrap}
+.btn:hover{transform:translateY(-2px)}
+.btn:active{transform:translateY(0) scale(.98)}
+.btn-primary{background:var(--sage-deep);color:#fff;box-shadow:0 10px 24px rgba(53,84,67,.22)}
+.btn-primary:hover{background:var(--sage)}
+.btn-soft{background:var(--mint);color:var(--sage-deep);border-color:var(--line-strong)}
+.btn-soft:hover{background:var(--mint-2)}
+.btn-ghost{background:transparent;border-color:var(--line-strong);color:var(--ink)}
+.btn-ghost:hover{background:var(--surface)}
+.btn-sm{padding:9px 16px;font-size:.86rem}
+.btn-danger{background:#f7e3e3;color:var(--danger);border-color:#eccaca}
+.icon-btn{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:1px solid var(--line-strong);background:var(--surface);transition:background .18s,transform .18s}
+.icon-btn:hover{background:var(--mint);transform:translateY(-1px)}
+.badge{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:99px;background:var(--butter);color:var(--ink);font-size:.75rem;font-weight:800}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;font-size:.8rem;font-weight:700;background:var(--surface);border:1px solid var(--line);color:var(--muted)}
+.chip.sage{background:var(--mint);color:var(--sage-deep);border-color:var(--line-strong)}
+.chip.peach{background:var(--peach);color:#7a4a35;border-color:#ecc6b2}
+.chip.lav{background:var(--lav);color:#5b4a78;border-color:#d4c8ea}
+.chip.butter{background:var(--butter);color:#7a5d1c;border-color:#ead79a}
+.chip.sky{background:var(--sky);color:#35606f;border-color:#c4dbe3}
+.chip.rose{background:var(--rose);color:#7a4653;border-color:#e6c2cc}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm)}
+.skip{position:absolute;left:-999px;top:10px;z-index:200;background:var(--sage-deep);color:#fff;padding:10px 16px;border-radius:10px}
+.skip:focus{left:10px}
+:focus-visible{outline:3px solid var(--sage);outline-offset:3px;border-radius:8px}
+.scroll-progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--sage),#8fb79a,var(--butter));z-index:120}
+.site-header{position:fixed;top:0;left:0;right:0;height:var(--header);z-index:100;background:var(--overlay);backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .2s,box-shadow .2s}
+.site-header.scrolled{border-color:var(--line);box-shadow:0 8px 30px rgba(53,84,67,.07)}
+.header-inner{height:var(--header);display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-family:var(--serif);font-size:1.55rem;font-weight:700;line-height:1}
+.brand-mark{width:42px;height:42px;border-radius:14px;background:var(--sage-deep);color:#fff;display:grid;place-items:center;box-shadow:0 8px 18px rgba(53,84,67,.22)}
+.brand small{display:block;font-family:var(--sans);font-size:.62rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.main-nav{display:flex;gap:4px;margin-left:auto}
+.main-nav a{position:relative;text-decoration:none;font-size:.9rem;font-weight:700;color:var(--muted);padding:10px 12px;border-radius:10px;transition:color .18s,background .18s}
+.main-nav a:hover{color:var(--ink);background:var(--mint)}
+.main-nav a.active{color:var(--sage-deep)}
+.main-nav a.active::after{content:"";position:absolute;left:12px;right:12px;bottom:4px;height:2px;border-radius:2px;background:var(--sage)}
+.header-actions{display:flex;align-items:center;gap:10px}
+.menu-btn{display:none}
+.hero{position:relative;padding:calc(var(--header) + 64px) 0 72px;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:-20% -10% auto;height:120%;z-index:0;
+  background:radial-gradient(60% 55% at 18% 22%,var(--mint) 0%,transparent 65%),radial-gradient(45% 45% at 82% 18%,var(--lav) 0%,transparent 62%),radial-gradient(50% 50% at 65% 85%,var(--butter) 0%,transparent 60%),radial-gradient(40% 40% at 8% 80%,var(--peach) 0%,transparent 60%)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center}
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:var(--surface);border:1px solid var(--line-strong);border-radius:999px;padding:8px 15px;font-size:.82rem;font-weight:800;color:var(--sage-deep);box-shadow:var(--shadow-sm);margin-bottom:22px}
+.hero h1{font-size:clamp(3rem,6.4vw,5.4rem);margin-bottom:22px}
+.hero h1 em{font-style:italic;color:var(--sage-deep);position:relative;white-space:nowrap}
+.hero h1 em::after{content:"";position:absolute;left:0;right:0;bottom:.06em;height:.16em;background:var(--butter);z-index:-1;border-radius:4px}
+.hero .lead{font-size:1.12rem;margin-bottom:30px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:30px}
+.hero-facts{display:flex;flex-wrap:wrap;gap:10px}
+.hero-art{position:relative}
+.hero-art-main{border-radius:32px;overflow:hidden;border:1px solid var(--line-strong);box-shadow:var(--shadow);background:var(--surface);animation:float 9s ease-in-out infinite}
+.hero-art-main svg{width:100%;height:auto}
+.float-card{position:absolute;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:14px 16px;box-shadow:var(--shadow);display:flex;gap:12px;align-items:center;max-width:250px}
+.float-card strong{display:block;font-size:.9rem}
+.float-card span{font-size:.78rem;color:var(--muted)}
+.float-card .dot{width:38px;height:38px;border-radius:12px;display:grid;place-items:center;flex:none}
+.float-a{top:-22px;right:-14px;animation:bob 7s ease-in-out infinite}
+.float-b{bottom:-24px;left:-18px;animation:bob 8s ease-in-out infinite reverse}
+.hero-note{margin-top:34px;display:flex;align-items:center;gap:12px;color:var(--muted);font-size:.9rem;font-weight:600}
+.hero-note .line{flex:1;height:1px;background:var(--line-strong)}
+.notice{margin-top:-18px;margin-bottom:10px}
+.notice-card{display:flex;gap:14px;align-items:flex-start;background:var(--surface);border:1px solid var(--line-strong);border-left:5px solid var(--info);border-radius:18px;padding:18px 20px;box-shadow:var(--shadow-sm);font-size:.92rem;color:var(--muted)}
+.notice-card strong{color:var(--ink)}
+.notice-card a{color:var(--info);font-weight:800}
+.bento{display:grid;grid-template-columns:repeat(12,1fr);gap:18px}
+.bento .card{padding:30px;position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s}
+.bento .card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.bento h3{font-size:1.75rem;margin-bottom:12px}
+.bento p{color:var(--muted);font-size:.96rem}
+.bento-a{grid-column:span 7;background:linear-gradient(135deg,var(--mint),#f4f8f2)}
+.bento-b{grid-column:span 5;background:linear-gradient(135deg,var(--peach),#fdf3ec)}
+.bento-c{grid-column:span 5;background:linear-gradient(135deg,var(--lav),#f6f2fb)}
+.bento-d{grid-column:span 7;background:linear-gradient(135deg,var(--butter),#fdf8e8)}
+.bento .num{position:absolute;right:22px;top:14px;font-family:var(--serif);font-size:4.4rem;font-weight:700;opacity:.12;line-height:1}
+.bento .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.path-strip{margin-top:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-weight:800;font-size:.9rem}
+.path-strip .step{background:var(--surface);border:1px solid var(--line-strong);border-radius:14px;padding:10px 16px}
+.path-strip .arrow{color:var(--sage)}
+.controls{display:grid;grid-template-columns:1.4fr repeat(3,minmax(140px,.7fr)) auto;gap:12px;align-items:end;margin-bottom:22px}
+.field{display:flex;flex-direction:column;gap:6px}
+.field label{font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.input,.select,.textarea{width:100%;background:var(--surface);border:1px solid var(--line-strong);border-radius:14px;padding:12px 14px;transition:border-color .18s,box-shadow .18s}
+.input:focus,.select:focus,.textarea:focus{outline:none;border-color:var(--sage);box-shadow:0 0 0 4px rgba(79,113,93,.14)}
+.search-wrap{position:relative}
+.search-wrap .icon{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search-wrap .input{padding-left:44px}
+.toggle-btn[aria-pressed="true"]{background:var(--sage-deep);color:#fff;border-color:var(--sage-deep)}
+.result-line{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px;color:var(--muted);font-size:.9rem;font-weight:700}
+.uni-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:18px}
+.uni-card{padding:24px;display:flex;flex-direction:column;gap:14px;transition:transform .2s,box-shadow .2s}
+.uni-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.uni-top{display:flex;gap:14px;align-items:flex-start}
+.crest{width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-family:var(--serif);font-weight:700;font-size:1.2rem;flex:none;color:var(--sage-deep)}
+.uni-card h3{font-size:1.35rem;line-height:1.15}
+.uni-city{font-size:.82rem;font-weight:800;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.uni-program{font-weight:700;font-size:.98rem}
+.uni-subjects{display:flex;flex-wrap:wrap;gap:7px}
+.uni-note{font-size:.85rem;color:var(--muted);background:var(--paper);border:1px dashed var(--line-strong);border-radius:12px;padding:10px 12px}
+.uni-actions{display:flex;gap:10px;margin-top:auto;align-items:center}
+.uni-actions .btn{flex:1}
+.save-btn[aria-pressed="true"]{background:var(--butter);border-color:#ead79a;color:#7a5d1c}
+.empty{padding:48px 24px;text-align:center;color:var(--muted);border:1px dashed var(--line-strong);border-radius:var(--radius);background:var(--surface)}
+.empty h3{font-size:1.6rem;color:var(--ink);margin-bottom:8px}
+.footnote{margin-top:20px;font-size:.85rem;color:var(--muted);max-width:80ch}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.tab{border:1px solid var(--line-strong);background:var(--surface);border-radius:999px;padding:11px 18px;font-weight:800;font-size:.9rem;color:var(--muted);display:inline-flex;gap:8px;align-items:center;transition:all .18s}
+.tab:hover{background:var(--mint)}
+.tab[aria-selected="true"]{background:var(--sage-deep);color:#fff;border-color:var(--sage-deep)}
+.career-panel{display:grid;grid-template-columns:1.1fr .9fr;gap:18px}
+.career-panel[hidden]{display:none}
+.career-main{padding:30px}
+.career-main h3{font-size:2rem;margin-bottom:10px}
+.role-list{display:grid;gap:12px;margin-top:22px}
+.role{display:flex;gap:14px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:14px}
+.role .dot{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;flex:none}
+.role strong{display:block}
+.role span{font-size:.88rem;color:var(--muted)}
+.career-side{padding:30px;background:linear-gradient(160deg,var(--sky),#f3f8fa);display:flex;flex-direction:column;gap:18px}
+.career-side h4{font-size:1.4rem}
+.career-side ul{margin:8px 0 0;padding-left:20px;color:var(--muted);font-size:.94rem}
+.career-side li{margin-bottom:6px}
+.first-step{background:var(--surface);border:1px solid var(--line-strong);border-radius:16px;padding:16px}
+.first-step strong{display:block;margin-bottom:6px}
+.practice-layout{display:grid;grid-template-columns:280px 1fr;gap:22px;align-items:start}
+.practice-side{position:sticky;top:calc(var(--header) + 20px);padding:18px}
+.practice-side h3{font-size:1.3rem;margin-bottom:12px}
+.task-list{display:flex;flex-direction:column;gap:8px;max-height:420px;overflow:auto;padding-right:4px}
+.task-item{display:flex;gap:12px;align-items:center;text-align:left;border:1px solid transparent;background:transparent;border-radius:14px;padding:11px 12px;transition:background .18s,border-color .18s}
+.task-item:hover{background:var(--mint)}
+.task-item.active{background:var(--mint);border-color:var(--line-strong)}
+.task-num{width:34px;height:34px;border-radius:11px;background:var(--surface);border:1px solid var(--line-strong);display:grid;place-items:center;font-weight:800;font-size:.85rem;flex:none}
+.task-item.done .task-num{background:var(--success);color:#fff;border-color:var(--success)}
+.task-item strong{display:block;font-size:.9rem;line-height:1.2}
+.task-item span{font-size:.75rem;color:var(--muted)}
+.progress-wrap{margin-top:18px}
+.progress-bar{height:10px;border-radius:99px;background:var(--mint);overflow:hidden;border:1px solid var(--line-strong)}
+.progress-fill{height:100%;width:0;background:linear-gradient(90deg,var(--sage),#8fb79a);border-radius:99px;transition:width .35s ease}
+.progress-text{display:flex;justify-content:space-between;font-size:.8rem;font-weight:800;color:var(--muted);margin-top:8px}
+.task-card{padding:30px}
+.task-meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
+.task-card h3{font-size:1.8rem;margin-bottom:12px}
+.task-source{font-size:.8rem;color:var(--muted);margin-bottom:18px}
+.excerpt{font-family:var(--serif);font-size:1.25rem;line-height:1.5;background:var(--paper);border-left:4px solid var(--sage);border-radius:0 16px 16px 0;padding:18px 22px;margin:0 0 20px;white-space:pre-line}
+.task-input{margin-bottom:12px}
+.textarea{min-height:190px;resize:vertical;line-height:1.6}
+.count-line{display:flex;justify-content:space-between;gap:12px;font-size:.82rem;color:var(--muted);font-weight:700;margin-bottom:16px;flex-wrap:wrap}
+.task-actions{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:16px}
+.feedback{border-radius:16px;padding:16px 18px;font-size:.94rem;margin-bottom:16px;border:1px solid var(--line)}
+.feedback.ok{background:#e8f3ec;border-color:#bfdcc9;color:#245c3c}
+.feedback.warn{background:#fbf3df;border-color:#ead79a;color:#7a5d1c}
+.feedback.info{background:#e8f1f5;border-color:#c4dbe3;color:#2f5a6b}
+.feedback strong{display:block;margin-bottom:4px}
+.model{border:1px solid var(--line-strong);border-radius:16px;background:var(--paper);margin-bottom:16px;overflow:hidden}
+.model summary{cursor:pointer;padding:14px 18px;font-weight:800;list-style:none;display:flex;justify-content:space-between;align-items:center}
+.model summary::-webkit-details-marker{display:none}
+.model-body{padding:0 18px 18px;color:var(--muted);font-size:.94rem;white-space:pre-line}
+.rubric{display:grid;gap:8px;margin:0 0 16px;padding:16px;border:1px dashed var(--line-strong);border-radius:16px;background:var(--surface)}
+.rubric label{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;color:var(--muted)}
+.rubric input{margin-top:4px;accent-color:var(--sage)}
+.format-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:26px}
+.format-item{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px;display:flex;gap:14px;align-items:center}
+.format-item .dot{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;flex:none}
+.format-item strong{display:block;font-family:var(--serif);font-size:1.6rem;line-height:1}
+.format-item span{font-size:.82rem;color:var(--muted);font-weight:700}
+.week-track{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(190px,1fr);gap:14px;overflow-x:auto;padding-bottom:14px}
+.week-card{padding:18px;display:flex;flex-direction:column;gap:10px;min-height:170px}
+.week-card .day{font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.week-card label{display:flex;gap:10px;align-items:flex-start;font-weight:700;font-size:.95rem;cursor:pointer}
+.week-card input{margin-top:4px;accent-color:var(--sage)}
+.week-card span{font-size:.82rem;color:var(--muted);margin-top:auto}
+.week-card.done{background:var(--mint);border-color:var(--line-strong)}
+.week-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.lib-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:end;margin-bottom:22px}
+.lib-controls .field{min-width:180px;flex:1}
+.era-chips{display:flex;gap:8px;flex-wrap:wrap}
+.lib-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:22px}
+.book-card{overflow:visible;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.book-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.book-art{position:relative;border-radius:var(--radius) var(--radius) 0 0;overflow:hidden;aspect-ratio:3/2;background:var(--mint)}
+.book-art svg{width:100%;height:100%}
+.book-portrait{position:absolute;left:20px;bottom:-28px;width:66px;height:66px;border-radius:50%;overflow:hidden;border:4px solid var(--surface);box-shadow:var(--shadow-sm);background:var(--paper)}
+.book-portrait svg{width:100%;height:100%}
+.book-body{padding:40px 22px 22px;display:flex;flex-direction:column;gap:10px;flex:1}
+.book-body h3{font-size:1.5rem;line-height:1.1}
+.book-author{font-weight:800;font-size:.9rem;color:var(--sage-deep)}
+.book-meta{font-size:.8rem;color:var(--muted);font-weight:700}
+.book-themes{display:flex;flex-wrap:wrap;gap:6px}
+.book-actions{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+.book-actions .btn{flex:1}
+.resources-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.resource{padding:24px;text-decoration:none;display:flex;flex-direction:column;gap:10px;transition:transform .2s,box-shadow .2s}
+.resource:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.resource .dot{width:46px;height:46px;border-radius:14px;display:grid;place-items:center}
+.resource h3{font-size:1.35rem}
+.resource p{font-size:.9rem;color:var(--muted)}
+.resource .link{margin-top:auto;font-weight:800;color:var(--sage-deep);display:inline-flex;gap:6px;align-items:center;font-size:.9rem}
+.site-footer{border-top:1px solid var(--line);padding:48px 0 36px;background:var(--surface);position:relative;z-index:1}
+.footer-grid{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.footer-grid p{color:var(--muted);font-size:.88rem;max-width:52ch}
+.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-weight:700;font-size:.9rem}
+.footer-links a{text-decoration:none;color:var(--muted)}
+.footer-links a:hover{color:var(--sage-deep)}
+.drawer-overlay,.modal-overlay{position:fixed;inset:0;background:var(--scrim);backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:opacity .25s;z-index:140}
+.drawer-overlay.open,.modal-overlay.open{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100dvh;width:min(440px,100%);background:var(--paper);z-index:150;transform:translateX(102%);transition:transform .3s ease;display:flex;flex-direction:column;border-left:1px solid var(--line);box-shadow:-20px 0 60px rgba(36,53,44,.18)}
+.drawer.open{transform:translateX(0)}
+.drawer-head{display:flex;justify-content:space-between;align-items:center;padding:22px;border-bottom:1px solid var(--line)}
+.drawer-head h2{font-size:1.8rem}
+.drawer-body{padding:22px;overflow:auto;flex:1;display:flex;flex-direction:column;gap:24px}
+.drawer-section h3{font-size:1.25rem;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.drawer-list{display:flex;flex-direction:column;gap:10px}
+.drawer-item{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px}
+.drawer-item .thumb{width:44px;height:44px;border-radius:12px;overflow:hidden;flex:none;background:var(--mint)}
+.drawer-item .thumb svg{width:100%;height:100%}
+.drawer-item strong{display:block;font-size:.9rem;line-height:1.2}
+.drawer-item span{font-size:.78rem;color:var(--muted)}
+.drawer-item .icon-btn{width:34px;height:34px;margin-left:auto}
+.drawer-empty{font-size:.88rem;color:var(--muted);border:1px dashed var(--line-strong);border-radius:14px;padding:14px}
+.drawer-foot{padding:18px 22px;border-top:1px solid var(--line);display:flex;gap:10px}
+.modal{position:fixed;inset:0;z-index:160;display:grid;place-items:center;padding:20px;opacity:0;pointer-events:none;transition:opacity .25s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-dialog{width:min(940px,100%);max-height:90dvh;overflow:auto;background:var(--paper);border-radius:28px;border:1px solid var(--line);box-shadow:0 30px 90px rgba(36,53,44,.28);position:relative;transform:translateY(14px);transition:transform .25s}
+.modal.open .modal-dialog{transform:translateY(0)}
+.modal-close{position:absolute;top:16px;right:16px;z-index:2}
+.modal-grid{display:grid;grid-template-columns:1fr 1fr}
+.modal-art{background:var(--mint);min-height:320px}
+.modal-art svg{width:100%;height:100%;object-fit:cover}
+.modal-content{padding:34px}
+.modal-author{display:flex;gap:14px;align-items:center;margin-bottom:18px}
+.modal-author .book-portrait{position:static;width:64px;height:64px;border-width:3px}
+.modal-content h2{font-size:2.2rem;margin-bottom:6px}
+.modal-meta{color:var(--muted);font-weight:700;font-size:.9rem;margin-bottom:18px}
+.modal-content h4{font-size:1.25rem;margin:18px 0 8px}
+.modal-content p,.modal-content li{color:var(--muted);font-size:.95rem}
+.modal-content ul{margin:0;padding-left:20px}
+.modal-question{background:var(--butter);border:1px solid #ead79a;border-radius:16px;padding:14px 16px;font-weight:700;color:#6b521a;margin-top:16px}
+.modal-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--ink);color:#fff;border-radius:16px;padding:14px 18px;display:flex;gap:16px;align-items:center;box-shadow:0 18px 50px rgba(36,53,44,.3);z-index:200;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;max-width:min(560px,calc(100% - 32px));font-size:.92rem;font-weight:600}
+.toast.show{opacity:1;transform:translate(-50%,0);pointer-events:auto}
+.toast button{background:var(--butter);color:var(--ink);border:none;border-radius:99px;padding:7px 14px;font-weight:800;font-size:.82rem}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+.svg-defs{position:absolute;width:0;height:0;overflow:hidden}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@media (max-width:1024px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .hero-art{max-width:640px;margin-inline:auto;width:100%}
+  .controls{grid-template-columns:1fr 1fr}
+  .practice-layout{grid-template-columns:1fr}
+  .practice-side{position:static}
+  .task-list{flex-direction:row;overflow-x:auto;max-height:none;padding-bottom:8px}
+  .task-item{min-width:220px}
+  .career-panel{grid-template-columns:1fr}
+  .modal-grid{grid-template-columns:1fr}
+  .modal-art{min-height:240px;max-height:320px}
+}
+@media (max-width:900px){
+  .main-nav{position:absolute;top:var(--header);left:0;right:0;background:var(--surface);border-bottom:1px solid var(--line);flex-direction:column;padding:14px 20px;display:none;box-shadow:var(--shadow)}
+  .main-nav.open{display:flex}
+  .menu-btn{display:inline-grid}
+  .header-actions{margin-left:auto}
+  .header-actions .btn-primary{display:none}
+  .bento-a,.bento-b,.bento-c,.bento-d{grid-column:span 12}
+  .format-strip{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .container{width:calc(100% - 28px)}
+  .section{padding:70px 0}
+  .hero{padding-top:calc(var(--header) + 36px)}
+  .float-a{right:6px;top:-16px;max-width:200px}
+  .float-b{display:none}
+  .controls{grid-template-columns:1fr}
+  .uni-grid{grid-template-columns:1fr}
+  .lib-grid{grid-template-columns:1fr}
+  .task-card,.career-main,.career-side{padding:22px}
+  .brand{font-size:1.3rem}
+  .brand-mark{width:38px;height:38px}
+  .route-label{display:none}
+  .modal-content{padding:24px}
+  .hero-facts .chip{font-size:.74rem}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg class="svg-defs" aria-hidden="true" focusable="false">
+<defs>
+  <linearGradient id="g-sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dcebf0"/><stop offset="1" stop-color="#f7f3e8"/></linearGradient>
+  <linearGradient id="g-night" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#c7d2e8"/><stop offset="1" stop-color="#f2e3d5"/></linearGradient>
+  <linearGradient id="g-sage" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e7f0e8"/><stop offset="1" stop-color="#cfe0d3"/></linearGradient>
+  <linearGradient id="g-peach" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6d9c8"/><stop offset="1" stop-color="#fbf1e6"/></linearGradient>
+  <linearGradient id="g-lav" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e6dff3"/><stop offset="1" stop-color="#f7f3fb"/></linearGradient>
+  <linearGradient id="g-butter" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7e9b7"/><stop offset="1" stop-color="#fbf6e3"/></linearGradient>
+  <linearGradient id="g-rose" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f2d9df"/><stop offset="1" stop-color="#fbf1f3"/></linearGradient>
+  <linearGradient id="g-paper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffdf7"/><stop offset="1" stop-color="#f1eadb"/></linearGradient>
+  <linearGradient id="g-coat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#43524a"/><stop offset="1" stop-color="#24352c"/></linearGradient>
+  <linearGradient id="g-skin" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f4d8bf"/><stop offset="1" stop-color="#e2b795"/></linearGradient>
+  <linearGradient id="g-hair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#544133"/><stop offset="1" stop-color="#2d241d"/></linearGradient>
+  <linearGradient id="g-whitehair" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f7f4ec"/><stop offset="1" stop-color="#d6d2c6"/></linearGradient>
+  <linearGradient id="g-water" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#cfe0e6"/><stop offset="1" stop-color="#eef4f2"/></linearGradient>
+  <linearGradient id="g-road" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ecdfc7"/><stop offset="1" stop-color="#d6c4a4"/></linearGradient>
+  <linearGradient id="g-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ecd28a"/><stop offset="1" stop-color="#c9a24d"/></linearGradient>
+
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5V5.5M8 7h8M8 11h6"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-up-right" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></symbol>
+  <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-external" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 13v6H5V6h6"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11m0 0 4-4m-4 4-4-4M5 20h14"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8zM19 16l.8 2.2L22 19l-2.2.8L19 22l-.8-2.2L16 19l2.2-.8z"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="m2 9 10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5M22 9v6"/></symbol>
+  <symbol id="i-pen" viewBox="0 0 24 24"><path d="M4 20l4-1L20 7l-3-3L5 16zM14 6l3 3"/></symbol>
+  <symbol id="i-theater" viewBox="0 0 24 24"><path d="M4 5h16v8a8 8 0 0 1-16 0z"/><path d="M8 10h.01M16 10h.01M9 14c1 1.5 5 1.5 6 0"/></symbol>
+  <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3M8 21h8"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.8 3h10.4A2 2 0 0 0 19 18l-5-9V3"/><path d="M7.5 15h9"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 14h10l1-14M10 11v6M14 11v6"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></symbol>
+  <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+  <symbol id="i-quote" viewBox="0 0 24 24"><path d="M5 15c0-4 2-7 5-8v3c-1.5.8-2 2-2 3h2v5H5zM14 15c0-4 2-7 5-8v3c-1.5.8-2 2-2 3h2v5h-5z"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+
+  <symbol id="p-pushkin" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-peach)"/>
+    <path d="M30 200c8-42 38-58 70-58s62 16 70 58z" fill="url(#g-coat)"/>
+    <path d="M84 142h32l-6 34-10 12-10-12z" fill="#fbfaf6"/>
+    <path d="M88 150c8 8 16 8 24 0l-4 22-8 8-8-8z" fill="#efe9dc"/>
+    <rect x="88" y="118" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="90" rx="34" ry="42" fill="url(#g-skin)"/>
+    <path d="M66 84c-4-30 14-48 34-48s38 18 34 48c-6-18-14-26-34-26s-28 8-34 26z" fill="url(#g-hair)"/>
+    <g fill="url(#g-hair)"><circle cx="70" cy="56" r="12"/><circle cx="84" cy="45" r="13"/><circle cx="101" cy="41" r="13"/><circle cx="118" cy="46" r="12"/><circle cx="131" cy="58" r="11"/><circle cx="64" cy="72" r="9"/><circle cx="136" cy="72" r="9"/></g>
+    <path d="M66 84c-2 16 0 30 6 38l6-4c-4-12-4-24-2-34zM134 84c2 16 0 30-6 38l-6-4c4-12 4-24 2-34z" fill="url(#g-hair)"/>
+    <path d="M82 84c5-4 11-4 15-1M103 83c5-3 11-3 15 1" stroke="#3a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="92" r="3" fill="#2d241d"/><circle cx="111" cy="92" r="3" fill="#2d241d"/>
+    <path d="M100 94l-4 16h8" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M90 118c6 4 14 4 20 0" stroke="#a86a55" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-lermontov" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-lav)"/>
+    <path d="M28 200c10-40 40-56 72-56s62 16 72 56z" fill="url(#g-coat)"/>
+    <path d="M70 150l30 20 30-20 8 50H62z" fill="#31465a"/>
+    <path d="M62 156l16-8 6 12-18 10zM138 156l-16-8-6 12 18 10z" fill="url(#g-gold)"/>
+    <rect x="88" y="118" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="90" rx="33" ry="41" fill="url(#g-skin)"/>
+    <path d="M66 82c-2-30 16-46 34-46s36 16 34 46c-8-16-16-22-34-22s-26 6-34 22z" fill="url(#g-hair)"/>
+    <path d="M68 66c10-14 24-18 32-16 10-4 24 2 32 16-10-6-20-8-32-6-12-2-22 0-32 6z" fill="#3a2c22"/>
+    <path d="M82 84c5-3 11-3 15 0M103 84c5-3 11-3 15 0" stroke="#3a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="92" r="3" fill="#2d241d"/><circle cx="111" cy="92" r="3" fill="#2d241d"/>
+    <path d="M100 94l-3 15h7" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M84 112c6-5 12-5 16-2 4-3 10-3 16 2-6 4-12 4-16 2-4 2-10 2-16-2z" fill="#3a2c22"/>
+    <path d="M92 122c5 3 11 3 16 0" stroke="#a86a55" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-gogol" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-butter)"/>
+    <path d="M30 200c8-42 38-58 70-58s62 16 70 58z" fill="url(#g-coat)"/>
+    <path d="M86 144h28l-4 30-10 10-10-10z" fill="#efe9dc"/>
+    <rect x="88" y="118" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="92" rx="32" ry="43" fill="url(#g-skin)"/>
+    <path d="M68 80c0-30 14-46 32-46s32 16 32 46l-8 44c-2-24-4-40-24-40s-22 16-24 40z" fill="url(#g-hair)"/>
+    <path d="M100 36c-2 14-2 24 0 34" stroke="#2d241d" stroke-width="3" fill="none"/>
+    <path d="M82 86c5-3 11-3 15 0M103 86c5-3 11-3 15 0" stroke="#3a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="94" r="3" fill="#2d241d"/><circle cx="111" cy="94" r="3" fill="#2d241d"/>
+    <path d="M100 94c-2 12-4 22-6 28h12" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M88 124c6-3 10-3 12-1 2-2 6-2 12 1" stroke="#3a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M92 132c5 3 11 3 16 0" stroke="#a86a55" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-turgenev" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-sage)"/>
+    <path d="M28 200c10-42 40-58 72-58s62 16 72 58z" fill="url(#g-coat)"/>
+    <path d="M86 146h28l-4 28-10 10-10-10z" fill="#efe9dc"/>
+    <rect x="88" y="116" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="88" rx="34" ry="42" fill="url(#g-skin)"/>
+    <path d="M64 84c-2-32 16-50 36-50s38 18 36 50c-8-18-16-26-36-26s-28 8-36 26z" fill="url(#g-whitehair)"/>
+    <path d="M66 96c-4 34 12 58 34 58s38-24 34-58c-6 20-16 30-34 30s-28-10-34-30z" fill="url(#g-whitehair)"/>
+    <path d="M82 84c5-4 11-4 15-1M103 83c5-3 11-3 15 1" stroke="#8a8578" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="92" r="3" fill="#3a3a34"/><circle cx="111" cy="92" r="3" fill="#3a3a34"/>
+    <path d="M100 94l-4 16h8" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M90 118c6 3 14 3 20 0" stroke="#a86a55" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-tolstoy" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-sky)"/>
+    <path d="M26 200c12-40 42-56 74-56s62 16 74 56z" fill="#5c6f60"/>
+    <path d="M84 146h32v54H84z" fill="#526457"/>
+    <rect x="88" y="114" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="86" rx="35" ry="42" fill="url(#g-skin)"/>
+    <path d="M64 82c0-32 16-48 36-48s36 16 36 48c-8-16-18-24-36-24s-28 8-36 24z" fill="url(#g-whitehair)"/>
+    <path d="M62 94c-6 44 14 74 38 74s44-30 38-74c-8 26-20 38-38 38s-30-12-38-38z" fill="url(#g-whitehair)"/>
+    <path d="M80 82c6-4 12-4 17-1M103 81c6-3 12-3 17 1" stroke="#8a8578" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="91" r="3" fill="#3a3a34"/><circle cx="111" cy="91" r="3" fill="#3a3a34"/>
+    <path d="M100 93l-5 18h10" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-dostoevsky" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-lav)"/>
+    <path d="M30 200c8-42 38-58 70-58s62 16 70 58z" fill="url(#g-coat)"/>
+    <path d="M86 144h28l-4 30-10 10-10-10z" fill="#efe9dc"/>
+    <rect x="88" y="116" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="90" rx="33" ry="42" fill="url(#g-skin)"/>
+    <path d="M68 78c2-26 14-40 32-40s30 14 32 40c-6-12-14-18-32-18s-26 6-32 18z" fill="url(#g-hair)"/>
+    <path d="M66 80c-2 14 0 26 4 34l6-4c-2-10-2-20 0-30zM134 80c2 14 0 26-4 34l-6-4c2-10 2-20 0-30z" fill="url(#g-hair)"/>
+    <path d="M68 100c0 34 14 54 32 54s32-20 32-54c-8 18-18 26-32 26s-24-8-32-26z" fill="#5a4636"/>
+    <path d="M80 84c6-4 12-4 17-1M103 83c6-3 12-3 17 1" stroke="#3a2c22" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="93" r="3" fill="#2d241d"/><circle cx="111" cy="93" r="3" fill="#2d241d"/>
+    <path d="M100 95l-4 16h8" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-chekhov" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-butter)"/>
+    <path d="M30 200c8-42 38-58 70-58s62 16 70 58z" fill="url(#g-coat)"/>
+    <path d="M88 144h24l-4 30-8 10-8-10z" fill="#fbfaf6"/>
+    <path d="M96 150h8l-2 26-2 6-2-6z" fill="#7a4a35"/>
+    <rect x="88" y="118" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="90" rx="33" ry="41" fill="url(#g-skin)"/>
+    <path d="M68 78c0-28 14-42 32-42s32 14 32 42c-8-14-16-20-32-20s-24 6-32 20z" fill="url(#g-hair)"/>
+    <path d="M88 116c4 14 8 22 12 22s8-8 12-22c-4 6-8 8-12 8s-8-2-12-8z" fill="#3a2c22"/>
+    <path d="M86 112c5-3 9-3 14-1 5-2 9-2 14 1" stroke="#3a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <g stroke="#3a3a34" stroke-width="2.5" fill="none"><circle cx="88" cy="92" r="9"/><circle cx="112" cy="92" r="9"/><path d="M97 92h6M79 90l-8-4M121 90l8-4"/></g>
+    <circle cx="88" cy="92" r="2.6" fill="#2d241d"/><circle cx="112" cy="92" r="2.6" fill="#2d241d"/>
+    <path d="M100 96l-3 13h7" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-bulgakov" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-sage)"/>
+    <path d="M30 200c8-42 38-58 70-58s62 16 70 58z" fill="url(#g-coat)"/>
+    <path d="M86 144h28l-6 34-8 10-8-10z" fill="#fbfaf6"/>
+    <path d="M96 150h8l-2 28-2 6-2-6z" fill="#31465a"/>
+    <rect x="88" y="118" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="90" rx="33" ry="41" fill="url(#g-skin)"/>
+    <path d="M66 80c0-30 16-46 36-46 18 0 30 12 32 34-10-12-22-16-38-14-12 2-22 10-30 26z" fill="url(#g-hair)"/>
+    <path d="M70 62c14-14 34-18 52-10" stroke="#2d241d" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M82 84c5-3 11-3 15 0M103 84c5-3 11-3 15 0" stroke="#3a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="92" r="3" fill="#2d241d"/><circle cx="111" cy="92" r="3" fill="#2d241d"/>
+    <path d="M100 94l-3 15h7" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M90 118c6 4 14 4 20 0" stroke="#a86a55" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-blok" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-sky)"/>
+    <path d="M30 200c8-42 38-58 70-58s62 16 70 58z" fill="url(#g-coat)"/>
+    <path d="M84 142h32l-4 34-12 12-12-12z" fill="#efe9dc"/>
+    <path d="M88 146h24v14H88z" fill="#fbfaf6"/>
+    <rect x="88" y="118" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="92" rx="33" ry="42" fill="url(#g-skin)"/>
+    <path d="M66 84c-2-30 14-48 34-48s36 18 34 48c-6-16-14-24-34-24s-28 8-34 24z" fill="url(#g-hair)"/>
+    <g fill="url(#g-hair)"><circle cx="72" cy="56" r="11"/><circle cx="86" cy="46" r="12"/><circle cx="102" cy="43" r="12"/><circle cx="118" cy="48" r="11"/><circle cx="130" cy="60" r="10"/></g>
+    <path d="M82 86c5-3 11-3 15 0M103 86c5-3 11-3 15 0" stroke="#3a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="94" r="3" fill="#2d241d"/><circle cx="111" cy="94" r="3" fill="#2d241d"/>
+    <path d="M100 96l-3 15h7" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M91 120c6 3 12 3 18 0" stroke="#a86a55" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="p-akhmatova" viewBox="0 0 200 200">
+    <rect width="200" height="200" fill="url(#g-rose)"/>
+    <path d="M28 200c10-40 40-56 72-56s62 16 72 56z" fill="#4a4658"/>
+    <path d="M62 156c14-10 26-14 38-14s24 4 38 14l-10 44H72z" fill="#6b5a6e"/>
+    <rect x="88" y="118" width="24" height="30" rx="10" fill="url(#g-skin)"/>
+    <ellipse cx="100" cy="92" rx="32" ry="42" fill="url(#g-skin)"/>
+    <path d="M66 92c-2-34 14-52 34-52s36 18 34 52l-6 34c-2-26-4-44-28-44s-26 18-28 44z" fill="#2d241d"/>
+    <path d="M70 66c10-10 20-14 30-14s20 4 30 14l-4 14c-8-8-16-12-26-12s-18 4-26 12z" fill="#2d241d"/>
+    <path d="M82 88c5-3 11-3 15 0M103 88c5-3 11-3 15 0" stroke="#3a2c22" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="89" cy="96" r="3" fill="#2d241d"/><circle cx="111" cy="96" r="3" fill="#2d241d"/>
+    <path d="M100 96c-2 12-4 20-6 26h10" stroke="#c99b78" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M90 126c6 4 14 4 20 0" stroke="#9a4f5e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="art-desk" viewBox="0 0 800 600">
+    <rect width="800" height="600" fill="url(#g-sky)"/>
+    <rect x="470" y="40" width="250" height="260" rx="18" fill="#fdfbf4" stroke="#c9d8cc" stroke-width="6"/>
+    <path d="M595 40v260M470 170h250" stroke="#c9d8cc" stroke-width="6"/>
+    <circle cx="640" cy="110" r="34" fill="#f7e9b7" opacity=".8"/>
+    <path d="M440 30c30 90 30 190 0 280l-40-10c24-86 24-174 0-260zM750 30c-30 90-30 190 0 280l40-10c-24-86-24-174 0-260z" fill="#f6d9c8" opacity=".75"/>
+    <path d="M0 380h800v220H0z" fill="url(#g-sage)"/>
+    <path d="M0 380h800v26H0z" fill="#bcd3c2"/>
+    <path d="M120 430l220-40 180 40-220 46z" fill="#fffdf7" stroke="#d8cdb8" stroke-width="3"/>
+    <path d="M340 390v86M150 432l170-32M360 402l150 30" stroke="#e4dcc8" stroke-width="3"/>
+    <path d="M120 430v18l180 46v-18zM520 430v18l-180 46v-18z" fill="#e9dfc9"/>
+    <g><rect x="560" y="330" width="150" height="24" rx="6" fill="#e6dff3"/><rect x="570" y="306" width="140" height="24" rx="6" fill="#f6d9c8"/><rect x="565" y="282" width="145" height="24" rx="6" fill="#f7e9b7"/><rect x="575" y="258" width="130" height="24" rx="6" fill="#cfe0d3"/></g>
+    <ellipse cx="640" cy="470" rx="46" ry="14" fill="#c9d8cc"/>
+    <path d="M610 430h60v30a30 30 0 0 1-60 0z" fill="#fffdf7" stroke="#d8cdb8" stroke-width="3"/>
+    <path d="M670 438c18 0 18 22 0 22" fill="none" stroke="#d8cdb8" stroke-width="4"/>
+    <path d="M628 414c-6-10 6-14 0-24M646 414c-6-10 6-14 0-24" stroke="#c9d8cc" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M90 470h120l-16 20H106z" fill="#c9a24d"/>
+    <path d="M150 470V330l60-60" stroke="#c9a24d" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M180 250l70 30-30 40-60-30z" fill="#e8c878"/>
+    <path d="M200 300l60 120" stroke="#f7e9b7" stroke-width="26" opacity=".35" stroke-linecap="round"/>
+    <rect x="360" y="480" width="150" height="90" rx="8" fill="#fffdf7" stroke="#e4dcc8" stroke-width="3" transform="rotate(-6 435 525)"/>
+    <path d="M380 505h110M378 525h110M376 545h80" stroke="#e4dcc8" stroke-width="3" transform="rotate(-6 435 525)"/>
+    <path d="M520 560c30-40 60-70 90-90-20 40-40 70-70 100z" fill="#43524a"/>
+    <path d="M540 570l70-100" stroke="#24352c" stroke-width="3"/>
+    <path d="M720 380c-10-60 10-110 40-130 10 50 0 100-40 130z" fill="#8fb79a"/>
+    <path d="M730 380c20-50 50-80 80-90-10 50-40 80-80 90z" fill="#6f9a7c"/>
+    <path d="M700 380h80l-10 60h-60z" fill="#fffdf7" stroke="#d8cdb8" stroke-width="3"/>
+  </symbol>
+  <symbol id="art-onegin" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-night)"/>
+    <circle cx="470" cy="80" r="34" fill="#fbf6e3"/>
+    <g fill="#fff" opacity=".8"><circle cx="80" cy="60" r="3"/><circle cx="160" cy="110" r="2"/><circle cx="240" cy="50" r="3"/><circle cx="330" cy="90" r="2"/><circle cx="540" cy="150" r="3"/><circle cx="120" cy="180" r="2"/></g>
+    <rect x="340" y="50" width="190" height="220" rx="12" fill="#b9c6de" stroke="#fbfaf6" stroke-width="8"/>
+    <path d="M435 50v220M340 160h190" stroke="#fbfaf6" stroke-width="8"/>
+    <path d="M0 300h600v100H0z" fill="#d8cdb8"/>
+    <path d="M60 320h300l-30 60H90z" fill="#c9b795"/>
+    <path d="M150 250c0-60 20-100 50-100s50 40 50 100l-10 70h-80z" fill="#4a4658"/>
+    <circle cx="200" cy="130" r="26" fill="#e2b795"/>
+    <path d="M174 124c0-24 12-36 26-36s26 12 26 36c-8-10-16-14-26-14s-18 4-26 14z" fill="#2d241d"/>
+    <rect x="250" y="280" width="120" height="70" rx="6" fill="#fffdf7" stroke="#d8cdb8" stroke-width="3" transform="rotate(-8 310 315)"/>
+    <path d="M268 300h84M266 316h84M264 332h60" stroke="#d8cdb8" stroke-width="3" transform="rotate(-8 310 315)"/>
+    <rect x="420" y="250" width="16" height="60" rx="4" fill="#fbf6e3"/>
+    <path d="M428 236c8 10 8 18 0 24-8-6-8-14 0-24z" fill="#e8c878"/>
+    <circle cx="428" cy="244" r="26" fill="#f7e9b7" opacity=".35"/>
+  </symbol>
+  <symbol id="art-hero" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-sky)"/>
+    <circle cx="460" cy="110" r="46" fill="#f7e9b7"/>
+    <path d="M0 260l120-120 90 80 110-140 130 150 150-90v260H0z" fill="#c4dbe3"/>
+    <path d="M0 300l140-100 120 70 130-110 210 140v100H0z" fill="#a9c6cf"/>
+    <path d="M0 340l180-70 160 50 260-60v140H0z" fill="#8fb0bb"/>
+    <path d="M220 400l40-160 60-20 40 180z" fill="#5d7f8a"/>
+    <path d="M280 220c0-26 8-44 20-44s20 18 20 44l-6 40h-28z" fill="#24352c"/>
+    <circle cx="300" cy="164" r="12" fill="#24352c"/>
+    <path d="M260 250l-30 30M340 250l30 30" stroke="#24352c" stroke-width="6" stroke-linecap="round"/>
+    <path d="M60 360c60-10 120-10 180 0M360 370c60-10 120-10 180 0" stroke="#eef4f2" stroke-width="4" fill="none" opacity=".6"/>
+  </symbol>
+  <symbol id="art-deadsouls" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-butter)"/>
+    <circle cx="120" cy="90" r="40" fill="#fbf6e3"/>
+    <path d="M0 240h600v160H0z" fill="#d6e6da"/>
+    <path d="M0 400c150-120 350-120 600-40v40z" fill="url(#g-road)"/>
+    <path d="M0 380c160-90 360-90 600-30" stroke="#c9b795" stroke-width="4" fill="none" stroke-dasharray="14 12"/>
+    <g fill="#5a4636"><path d="M180 280c10-30 40-40 60-30l20 30-10 40h-60z"/><path d="M260 270c10-30 40-40 60-30l20 30-10 40h-60z"/><path d="M340 280c10-30 40-40 60-30l20 30-10 40h-60z"/></g>
+    <g stroke="#3a2c22" stroke-width="6" stroke-linecap="round"><path d="M195 320v30M235 320v30M275 310v30M315 310v30M355 320v30M395 320v30"/></g>
+    <path d="M170 260l20-30 20 10M250 250l20-30 20 10M330 260l20-30 20 10" stroke="#3a2c22" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <rect x="420" y="240" width="110" height="70" rx="12" fill="#43524a"/>
+    <path d="M430 240c10-30 80-30 90 0z" fill="#31465a"/>
+    <circle cx="445" cy="320" r="18" fill="#24352c"/><circle cx="505" cy="320" r="18" fill="#24352c"/>
+    <path d="M400 280h30" stroke="#3a2c22" stroke-width="5"/>
+    <g fill="#e9dcc4" opacity=".8"><circle cx="140" cy="330" r="16"/><circle cx="110" cy="345" r="12"/><circle cx="560" cy="330" r="14"/></g>
+  </symbol>
+  <symbol id="art-fathers" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-sage)"/>
+    <circle cx="500" cy="80" r="36" fill="#f7e9b7"/>
+    <path d="M0 280h600v120H0z" fill="#bcd3c2"/>
+    <rect x="360" y="150" width="180" height="130" fill="#fbf6e3" stroke="#d8cdb8" stroke-width="4"/>
+    <path d="M350 150l100-60 100 60z" fill="#c9b795"/>
+    <rect x="390" y="190" width="30" height="40" fill="#cfe0e6"/><rect x="470" y="190" width="30" height="40" fill="#cfe0e6"/>
+    <rect x="435" y="220" width="30" height="60" fill="#8a6f52"/>
+    <g><rect x="90" y="180" width="14" height="110" fill="#8a6f52"/><circle cx="97" cy="150" r="56" fill="#8fb79a"/><circle cx="60" cy="170" r="36" fill="#a9cbae"/><circle cx="135" cy="170" r="36" fill="#a9cbae"/></g>
+    <g><rect x="250" y="200" width="12" height="90" fill="#8a6f52"/><circle cx="256" cy="175" r="44" fill="#8fb79a"/></g>
+    <rect x="150" y="300" width="150" height="14" rx="6" fill="#8a6f52"/><rect x="160" y="314" width="10" height="30" fill="#8a6f52"/><rect x="280" y="314" width="10" height="30" fill="#8a6f52"/>
+    <path d="M190 250c0-24 8-40 18-40s18 16 18 40l-6 50h-24z" fill="#31465a"/><circle cx="208" cy="200" r="12" fill="#e2b795"/>
+    <path d="M240 255c0-24 8-40 18-40s18 16 18 40l-6 45h-24z" fill="#5c6f60"/><circle cx="258" cy="205" r="12" fill="#e2b795"/>
+    <path d="M0 360c120-20 240-20 360 0s180 10 240 0" stroke="#a9cbae" stroke-width="6" fill="none"/>
+  </symbol>
+  <symbol id="art-war" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-lav)"/>
+    <path d="M0 320h600v80H0z" fill="#d4c8ea"/>
+    <g fill="#f7f3fb" stroke="#d4c8ea" stroke-width="4"><path d="M40 320V140a60 60 0 0 1 120 0v180z"/><path d="M440 320V140a60 60 0 0 1 120 0v180z"/></g>
+    <path d="M300 40v50" stroke="#c9a24d" stroke-width="5"/>
+    <path d="M240 90h120l-20 40h-80z" fill="url(#g-gold)"/>
+    <g fill="#f7e9b7"><circle cx="250" cy="140" r="8"/><circle cx="275" cy="150" r="8"/><circle cx="300" cy="155" r="8"/><circle cx="325" cy="150" r="8"/><circle cx="350" cy="140" r="8"/></g>
+    <circle cx="300" cy="120" r="60" fill="#f7e9b7" opacity=".25"/>
+    <path d="M250 220c0-30 12-50 26-50s26 20 26 50l14 100h-80z" fill="#fbfaf6"/>
+    <circle cx="276" cy="158" r="16" fill="#e2b795"/>
+    <path d="M260 152c0-16 8-24 16-24s16 8 16 24c-6-6-10-8-16-8s-10 2-16 8z" fill="#5a4636"/>
+    <path d="M330 210c0-28 10-46 22-46s22 18 22 46l-6 110h-32z" fill="#24352c"/>
+    <circle cx="352" cy="152" r="15" fill="#e2b795"/>
+    <path d="M300 230l30-10M276 230l-26-10" stroke="#e2b795" stroke-width="8" stroke-linecap="round"/>
+    <path d="M0 340h600M0 360h600" stroke="#c4b6df" stroke-width="3"/>
+  </symbol>
+  <symbol id="art-crime" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-night)"/>
+    <g fill="#b9c6de"><rect x="20" y="100" width="90" height="180"/><rect x="120" y="70" width="80" height="210"/><rect x="420" y="90" width="90" height="190"/><rect x="520" y="120" width="70" height="160"/></g>
+    <g fill="#f7e9b7"><rect x="40" y="130" width="16" height="22"/><rect x="70" y="170" width="16" height="22"/><rect x="140" y="110" width="16" height="22"/><rect x="165" y="160" width="16" height="22"/><rect x="440" y="130" width="16" height="22"/><rect x="475" y="180" width="16" height="22"/><rect x="540" y="150" width="16" height="22"/></g>
+    <path d="M0 280h600v120H0z" fill="url(#g-water)"/>
+    <path d="M180 280c40-70 200-70 240 0z" fill="#8a8578"/>
+    <path d="M200 280c30-50 170-50 200 0z" fill="#c7d2e8"/>
+    <path d="M160 270h280v14H160z" fill="#6f6a5e"/>
+    <path d="M290 220c0-26 8-44 18-44s18 18 18 44l-6 50h-24z" fill="#24352c"/>
+    <circle cx="308" cy="166" r="12" fill="#e2b795"/>
+    <path d="M0 320c100-10 200-10 300 0s200 10 300 0M0 350c100-10 200-10 300 0s200 10 300 0" stroke="#b9c6de" stroke-width="4" fill="none"/>
+    <circle cx="90" cy="60" r="26" fill="#fbf6e3" opacity=".8"/>
+  </symbol>
+  <symbol id="art-cherry" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-rose)"/>
+    <circle cx="500" cy="80" r="36" fill="#fbf6e3"/>
+    <path d="M0 300h600v100H0z" fill="#d6e6da"/>
+    <rect x="380" y="180" width="170" height="120" fill="#fbf6e3" stroke="#d8cdb8" stroke-width="4"/>
+    <path d="M370 180l95-50 95 50z" fill="#c9b795"/>
+    <rect x="410" y="210" width="28" height="36" fill="#cfe0e6"/><rect x="490" y="210" width="28" height="36" fill="#cfe0e6"/>
+    <g><rect x="80" y="180" width="14" height="130" fill="#8a6f52"/><circle cx="87" cy="150" r="60" fill="#f2d9df"/><circle cx="50" cy="170" r="36" fill="#f6e3e8"/><circle cx="125" cy="170" r="36" fill="#f6e3e8"/><circle cx="87" cy="120" r="30" fill="#f6e3e8"/></g>
+    <g><rect x="220" y="200" width="12" height="110" fill="#8a6f52"/><circle cx="226" cy="175" r="48" fill="#f2d9df"/><circle cx="200" cy="190" r="28" fill="#f6e3e8"/><circle cx="252" cy="190" r="28" fill="#f6e3e8"/></g>
+    <g fill="#f2d9df"><circle cx="160" cy="330" r="5"/><circle cx="200" cy="350" r="4"/><circle cx="300" cy="340" r="5"/><circle cx="340" cy="360" r="4"/><circle cx="120" cy="360" r="4"/></g>
+    <path d="M300 250c0-26 10-44 22-44s22 18 22 44l10 60h-64z" fill="#6b5a6e"/>
+    <circle cx="322" cy="196" r="14" fill="#e2b795"/>
+    <path d="M322 180c20-30 60-30 80 0z" fill="#e6dff3"/>
+    <path d="M362 180v70" stroke="#8a6f52" stroke-width="4"/>
+  </symbol>
+  <symbol id="art-master" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-night)"/>
+    <circle cx="460" cy="100" r="56" fill="#fbf6e3"/>
+    <circle cx="440" cy="90" r="10" fill="#e9e2cf"/><circle cx="475" cy="115" r="8" fill="#e9e2cf"/>
+    <g fill="#fff" opacity=".8"><circle cx="80" cy="60" r="3"/><circle cx="160" cy="100" r="2"/><circle cx="250" cy="50" r="3"/><circle cx="330" cy="90" r="2"/><circle cx="540" cy="180" r="3"/></g>
+    <path d="M0 300l80-60 70 40 90-70 100 60 90-50 170 80v100H0z" fill="#4a4658"/>
+    <path d="M0 340l120-50 140 40 160-50 180 60v60H0z" fill="#31465a"/>
+    <g fill="#f7e9b7"><rect x="60" y="300" width="14" height="18"/><rect x="150" y="310" width="14" height="18"/><rect x="300" y="300" width="14" height="18"/><rect x="470" y="320" width="14" height="18"/></g>
+    <path d="M250 300c0-30 14-50 30-50s30 20 30 50l-8 30h-44z" fill="#1c1c22"/>
+    <path d="M262 252l-8-22 18 12zM298 252l8-22-18 12z" fill="#1c1c22"/>
+    <circle cx="270" cy="270" r="4" fill="#f7e9b7"/><circle cx="290" cy="270" r="4" fill="#f7e9b7"/>
+    <path d="M310 310c40-10 60 10 50 30" stroke="#1c1c22" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <path d="M120 250c10-20 30-20 40 0-10 10-30 10-40 0z" fill="#f7e9b7"/>
+    <path d="M140 250v40" stroke="#8a6f52" stroke-width="4"/>
+  </symbol>
+  <symbol id="art-blok" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-night)"/>
+    <path d="M0 320h600v80H0z" fill="#b9c6de"/>
+    <g fill="#a9b6cf" opacity=".7"><rect x="20" y="120" width="100" height="200"/><rect x="480" y="100" width="100" height="220"/></g>
+    <rect x="40" y="160" width="60" height="40" fill="#cfe0d3"/>
+    <path d="M60 170h20M70 160v20" stroke="#3f7d58" stroke-width="6"/>
+    <path d="M300 100v220" stroke="#43524a" stroke-width="8"/>
+    <path d="M270 100h60l-10 40h-40z" fill="#43524a"/>
+    <circle cx="300" cy="130" r="26" fill="#f7e9b7"/>
+    <circle cx="300" cy="130" r="60" fill="#f7e9b7" opacity=".25"/>
+    <path d="M380 220c0-40 14-66 30-66s30 26 30 66l-10 100h-40z" fill="#4a4658" opacity=".85"/>
+    <circle cx="410" cy="140" r="18" fill="#e2b795" opacity=".9"/>
+    <path d="M392 134c0-18 8-26 18-26s18 8 18 26c-6-8-12-10-18-10s-12 2-18 10z" fill="#2d241d"/>
+    <path d="M0 300c150-20 300-20 450 0s120 10 150 0M0 340c150-20 300-20 450 0s120 10 150 0" stroke="#c7d2e8" stroke-width="6" fill="none" opacity=".7"/>
+    <g fill="#fff" opacity=".6"><circle cx="150" cy="80" r="3"/><circle cx="220" cy="60" r="2"/><circle cx="450" cy="70" r="3"/><circle cx="540" cy="120" r="2"/></g>
+  </symbol>
+  <symbol id="art-requiem" viewBox="0 0 600 400">
+    <rect width="600" height="400" fill="url(#g-sky)"/>
+    <path d="M0 320h600v80H0z" fill="#eef4f2"/>
+    <rect x="60" y="60" width="480" height="260" fill="#b9c6de"/>
+    <path d="M60 120h480M60 180h480M60 240h480M140 60v260M220 60v260M300 60v260M380 60v260M460 60v260" stroke="#a9b6cf" stroke-width="4"/>
+    <rect x="380" y="100" width="70" height="90" fill="#4a4658"/>
+    <path d="M395 100v90M415 100v90M435 100v90" stroke="#b9c6de" stroke-width="6"/>
+    <path d="M220 220c0-40 16-66 34-66s34 26 34 66l-10 100h-48z" fill="#4a4658"/>
+    <circle cx="254" cy="140" r="20" fill="#e2b795"/>
+    <path d="M232 136c0-22 10-32 22-32s22 10 22 32l-6 20c-4-14-8-20-16-20s-12 6-16 20z" fill="#2d241d"/>
+    <path d="M230 160c10 20 38 20 48 0l10 60h-68z" fill="#6b5a6e"/>
+    <rect x="150" y="280" width="12" height="40" rx="3" fill="#fbf6e3"/>
+    <path d="M156 268c6 8 6 14 0 18-6-4-6-10 0-18z" fill="#e8c878"/>
+    <g fill="#fff" opacity=".9"><circle cx="100" cy="80" r="3"/><circle cx="180" cy="120" r="2"/><circle cx="320" cy="70" r="3"/><circle cx="500" cy="140" r="2"/><circle cx="540" cy="240" r="3"/><circle cx="90" cy="260" r="2"/></g>
+  </symbol>
+</defs>
+</svg>
+
+<a class="skip" href="#main">К содержанию</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="Литера — на главную">
+      <span class="brand-mark"><svg class="icon"><use href="#i-book"/></svg></span>
+      <span>Литера<small>ЕГЭ · 2026/27</small></span>
+    </a>
+    <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+      <a href="#why">Зачем сдавать</a>
+      <a href="#universities">Вузы</a>
+      <a href="#careers">Профессии</a>
+      <a href="#practice">Практикум</a>
+      <a href="#library">Библиотека</a>
+    </nav>
+    <div class="header-actions">
+      <button class="btn btn-ghost btn-sm" id="routeBtn" type="button">
+        <svg class="icon"><use href="#i-bookmark"/></svg><span class="route-label">Мой маршрут</span><span class="badge" id="routeCount">0</span>
+      </button>
+      <a class="btn btn-primary btn-sm" href="#practice">К заданиям</a>
+      <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="mainNav" aria-label="Открыть меню">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="reveal">
+      <span class="hero-pill"><svg class="icon"><use href="#i-sun"/></svg> Сезон 2026–2027 · спокойно и по делу</span>
+      <h1>Литература — <em>твой сильный</em> аргумент.</h1>
+      <p class="lead">Один экзамен открывает десятки маршрутов: от филологии и журналистики до театра, кино, издательского дела и преподавания. Разберись в формате, собери план поступления и начни с малого — с одного текста.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#practice">Попробовать задания <svg class="icon"><use href="#i-arrow"/></svg></a>
+        <a class="btn btn-soft" href="#universities">Куда можно поступить <svg class="icon"><use href="#i-up-right"/></svg></a>
+      </div>
+      <div class="hero-facts">
+        <span class="chip sage">11 заданий</span>
+        <span class="chip butter">235 минут</span>
+        <span class="chip lav">5 тем сочинения — выбираешь одну</span>
+      </div>
+      <div class="hero-note"><span class="line"></span> Без зубрёжки ради зубрёжки. С опорой на текст и понятным планом. <span class="line"></span></div>
+    </div>
+    <div class="hero-art reveal">
+      <div class="hero-art-main"><svg viewBox="0 0 800 600" role="img" aria-label="Светлый рабочий стол с книгами, чашкой чая и лампой"><use href="#art-desk"/></svg></div>
+      <div class="float-card float-a">
+        <span class="dot" style="background:var(--mint)"><svg class="icon"><use href="#i-target"/></svg></span>
+        <div><strong>Сегодня — один текст</strong><span>20 страниц + 1 задание. Этого достаточно для старта.</span></div>
+      </div>
+      <div class="float-card float-b">
+        <span class="dot" style="background:var(--butter)"><svg class="icon"><use href="#i-quote"/></svg></span>
+        <div><strong>«Мы все учились понемногу…»</strong><span>А. С. Пушкин, «Евгений Онегин»</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container notice reveal">
+  <div class="notice-card">
+    <svg class="icon" style="color:var(--info);margin-top:2px"><use href="#i-info"/></svg>
+    <div><strong>Об актуальности.</strong> Это независимый учебный навигатор для подготовки в 2026–2027 годах. Упражнения ниже — авторская практика по модели заданий ФИПИ, а не официальный вариант. Перед экзаменом сверяйте демоверсию, спецификацию, кодификатор и критерии своего года на <a href="https://fipi.ru/ege/demoversii-specifikacii-kodifikatory" target="_blank" rel="noopener">сайте ФИПИ</a>, а перечни вступительных испытаний — в правилах приёма конкретных вузов.</div>
+  </div>
+</div>
+
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">01 · Зачем сдавать</span>
+      <h2>Один экзамен открывает сразу несколько дверей.</h2>
+      <p class="lead">Литература — не «запасной предмет для галочки». Это профильный экзамен для гуманитарных и творческих направлений и навык, который остаётся с тобой далеко за пределами приёмной комиссии.</p>
+    </div>
+    <div class="bento">
+      <article class="card bento-a reveal">
+        <span class="num">01</span>
+        <h3>Профильный предмет для гуманитарных направлений</h3>
+        <p>Литература встречается в наборах ЕГЭ на филологию, литературное творчество, педагогические профили «русский язык и литература», а также на ряде театральных, издательских и журналистских программ. Конкретный набор зависит от вуза, профиля и года приёма.</p>
+        <div class="chips">
+          <span class="chip sage">Филология</span><span class="chip peach">Литературное творчество</span><span class="chip lav">Театр и кино</span><span class="chip butter">Издательское дело</span><span class="chip sky">Педагогика</span>
+        </div>
+        <div class="path-strip">
+          <span class="step">ЕГЭ по литературе</span><span class="arrow">→</span><span class="step">Программа вуза</span><span class="arrow">→</span><span class="step">Профессия</span>
+        </div>
+      </article>
+      <article class="card bento-b reveal">
+        <span class="num">02</span>
+        <h3>Сильный результат — сильная заявка</h3>
+        <p>Высокий балл по профильному предмету усиливает сумму конкурсных баллов там, где литература входит в перечень испытаний. Но это не гарантия поступления: важны все предметы, индивидуальные достижения, творческие испытания и конкурс конкретного года.</p>
+        <div class="chips"><span class="chip peach">Сумма баллов</span><span class="chip peach">Профильный предмет</span></div>
+      </article>
+      <article class="card bento-c reveal">
+        <span class="num">03</span>
+        <h3>Навыки, которые работают дальше</h3>
+        <p>Медленное чтение, умение видеть конфликт и композицию, аргументировать тезисом и текстом, писать ясно и точно. Это база для редактора, сценариста, журналиста, преподавателя, исследователя и любого, кто работает со смыслами.</p>
+        <div class="chips"><span class="chip lav">Аргументация</span><span class="chip lav">Письмо</span><span class="chip lav">Контекст</span></div>
+      </article>
+      <article class="card bento-d reveal">
+        <span class="num">04</span>
+        <h3>Творчество тоже требует точности</h3>
+        <p>ЕГЭ по литературе проверяет не «красиво ли ты чувствуешь», а умеешь ли ты читать внимательно: различать род и жанр, видеть позицию автора, анализировать деталь, сопоставлять тексты и строить сочинение по теме. Этому можно научиться через регулярную короткую практику.</p>
+        <div class="chips"><span class="chip butter">Термины</span><span class="chip butter">Анализ</span><span class="chip butter">Сопоставление</span><span class="chip butter">Сочинение</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="universities" style="background:linear-gradient(180deg,transparent,var(--mint) 30%,var(--mint) 70%,transparent)">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">02 · Вузы и программы</span>
+      <h2>Где литература действительно нужна.</h2>
+      <p class="lead">Примеры программ, где литература входит в перечни вступительных испытаний. Сохраняй подходящие варианты в «Мой маршрут» и обязательно проверяй правила приёма на официальных сайтах.</p>
+    </div>
+    <div class="controls reveal">
+      <div class="field">
+        <label for="uniSearch">Поиск</label>
+        <div class="search-wrap"><svg class="icon"><use href="#i-search"/></svg><input class="input" id="uniSearch" type="search" placeholder="Вуз, город или программа"></div>
+      </div>
+      <div class="field">
+        <label for="uniCity">Город</label>
+        <select class="select" id="uniCity"><option value="all">Все города</option><option>Москва</option><option>Санкт-Петербург</option></select>
+      </div>
+      <div class="field">
+        <label for="uniDir">Направление</label>
+        <select class="select" id="uniDir"><option value="all">Все направления</option><option value="philology">Филология</option><option value="education">Педагогика</option><option value="creative">Творчество</option></select>
+      </div>
+      <div class="field">
+        <label for="uniSort">Сортировка</label>
+        <select class="select" id="uniSort"><option value="name">По названию</option><option value="city">По городу</option></select>
+      </div>
+      <button class="btn btn-ghost toggle-btn" id="uniSaved" type="button" aria-pressed="false"><svg class="icon"><use href="#i-bookmark"/></svg> Сохранённые</button>
+    </div>
+    <div class="result-line"><span id="uniCount"></span><button class="btn btn-ghost btn-sm" id="uniReset" type="button">Сбросить фильтры</button></div>
+    <div class="uni-grid" id="uniGrid"></div>
+    <p class="footnote">Ориентир — приёмные кампании 2026 года и открытые перечни вступительных испытаний. Для поступления в 2027 году набор предметов, минимальные баллы, творческие и дополнительные испытания могут измениться: сверяйте актуальные правила приёма каждого вуза. Список не является исчерпывающим.</p>
+  </div>
+</section>
+
+<section class="section" id="careers">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">03 · Специальности и пути</span>
+      <h2>Не только «пойти в учителя».</h2>
+      <p class="lead">Литература — это вход в профессии, где нужно понимать текст, человека и контекст. Выбери маршрут и посмотри, какие программы ближе.</p>
+    </div>
+    <div class="tabs reveal" role="tablist" aria-label="Маршруты после ЕГЭ по литературе">
+      <button class="tab" role="tab" id="tab-word" aria-selected="true" aria-controls="panel-word" data-career="word"><svg class="icon"><use href="#i-pen"/></svg> Слово и смыслы</button>
+      <button class="tab" role="tab" id="tab-media" aria-selected="false" aria-controls="panel-media" data-career="media" tabindex="-1"><svg class="icon"><use href="#i-mic"/></svg> Медиа и коммуникации</button>
+      <button class="tab" role="tab" id="tab-culture" aria-selected="false" aria-controls="panel-culture" data-career="culture" tabindex="-1"><svg class="icon"><use href="#i-theater"/></svg> Культура и сцена</button>
+      <button class="tab" role="tab" id="tab-edu" aria-selected="false" aria-controls="panel-edu" data-career="edu" tabindex="-1"><svg class="icon"><use href="#i-grad"/></svg> Образование и наука</button>
+    </div>
+
+    <div class="career-panel reveal" id="panel-word" role="tabpanel" aria-labelledby="tab-word">
+      <div class="card career-main">
+        <h3>Работать с текстом профессионально</h3>
+        <p class="lead">Филология и литературное творчество учат видеть, как устроен текст: от композиции и тропа до авторской позиции и исторического контекста.</p>
+        <div class="role-list">
+          <div class="role"><span class="dot" style="background:var(--mint)"><svg class="icon"><use href="#i-pen"/></svg></span><div><strong>Редактор / литературный редактор</strong><span>Готовит тексты к публикации, чувствует стиль, логику и читателя.</span></div></div>
+          <div class="role"><span class="dot" style="background:var(--peach)"><svg class="icon"><use href="#i-quote"/></svg></span><div><strong>Литературный критик / обозреватель</strong><span>Разбирает книги и культурные явления, аргументирует оценку.</span></div></div>
+          <div class="role"><span class="dot" style="background:var(--lav)"><svg class="icon"><use href="#i-book"/></svg></span><div><strong>Переводчик художественной литературы</strong><span>Переносит смысл, интонацию и образную систему между языками.</span></div></div>
+        </div>
+      </div>
+      <div class="card career-side">
+        <div><h4>Что прокачивает литература</h4><ul><li>Внимательное чтение и работа с деталью</li><li>Тезис → аргумент → вывод</li><li>Чувство стиля и жанра</li><li>Культурный и исторический контекст</li></ul></div>
+        <div class="first-step"><strong>Первый шаг уже сейчас</strong>Веди читательский дневник: один тезис, две опорные цитаты, один вопрос к тексту.</div>
+        <button class="btn btn-primary" type="button" data-goto-dir="philology">Смотреть программы <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+
+    <div class="career-panel reveal" id="panel-media" role="tabpanel" aria-labelledby="tab-media" hidden>
+      <div class="card career-main">
+        <h3>Рассказывать истории в медиа</h3>
+        <p class="lead">Журналистика, медиакоммуникации, сценарные и издательские направления ценят умение строить сюжет, слышать героя и держать смысл. Набор ЕГЭ на таких программах нужно проверять особенно внимательно: литература может сочетаться с творческим испытанием.</p>
+        <div class="role-list">
+          <div class="role"><span class="dot" style="background:var(--sky)"><svg class="icon"><use href="#i-mic"/></svg></span><div><strong>Журналист / корреспондент</strong><span>Собирает факты, интервьюирует, пишет ясно и ответственно.</span></div></div>
+          <div class="role"><span class="dot" style="background:var(--butter)"><svg class="icon"><use href="#i-theater"/></svg></span><div><strong>Сценарист</strong><span>Превращает конфликт и характер в сцены, диалоги и структуру.</span></div></div>
+          <div class="role"><span class="dot" style="background:var(--rose)"><svg class="icon"><use href="#i-pen"/></svg></span><div><strong>Контент-редактор / сторителлер</strong><span>Упаковывает сложные смыслы в понятные форматы для аудитории.</span></div></div>
+        </div>
+      </div>
+      <div class="card career-side">
+        <div><h4>Что прокачивает литература</h4><ul><li>Композиция и конфликт</li><li>Диалог и голос персонажа</li><li>Умение отделять факт от оценки</li><li>Работа с аудиторией и интонацией</li></ul></div>
+        <div class="first-step"><strong>Первый шаг уже сейчас</strong>Разбери один рассказ как сценарий: экспозиция, конфликт, кульминация, финал. Запиши питч на 5 предложений.</div>
+        <button class="btn btn-primary" type="button" data-goto-dir="all">К списку вузов <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+
+    <div class="career-panel reveal" id="panel-culture" role="tabpanel" aria-labelledby="tab-culture" hidden>
+      <div class="card career-main">
+        <h3>Делать культуру видимой</h3>
+        <p class="lead">Театр, кино, литературные музеи, фестивали и библиотеки работают с текстом как с событием. Здесь литература помогает понимать драматургию, эпоху и живую реакцию зрителя.</p>
+        <div class="role-list">
+          <div class="role"><span class="dot" style="background:var(--lav)"><svg class="icon"><use href="#i-theater"/></svg></span><div><strong>Драматург / режиссёр</strong><span>Строит действие, конфликт и сценическое время.</span></div></div>
+          <div class="role"><span class="dot" style="background:var(--peach)"><svg class="icon"><use href="#i-sparkles"/></svg></span><div><strong>Куратор литературных событий</strong><span>Придумывает фестивали, выставки, читательские программы.</span></div></div>
+          <div class="role"><span class="dot" style="background:var(--mint)"><svg class="icon"><use href="#i-book"/></svg></span><div><strong>Специалист музея / библиотеки</strong><span>Работает с наследием, архивами и просвещением.</span></div></div>
+        </div>
+      </div>
+      <div class="card career-side">
+        <div><h4>Что прокачивает литература</h4><ul><li>Драматургия и диалог</li><li>Образ эпохи и быта</li><li>Интерпретация и режиссура смысла</li><li>Публичное讲述ение историй</li></ul></div>
+        <div class="first-step"><strong>Первый шаг уже сейчас</strong>Сделай инсценировку одной сцены на 3 минуты: кто хочет чего, что мешает, чем всё меняется.</div>
+        <button class="btn btn-primary" type="button" data-goto-dir="creative">Творческие программы <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+
+    <div class="career-panel reveal" id="panel-edu" role="tabpanel" aria-labelledby="tab-edu" hidden>
+      <div class="card career-main">
+        <h3>Объяснять и исследовать</h3>
+        <p class="lead">Педагогические и филологические программы готовят тех, кто учит читать, объясняет сложное и исследует тексты. Это путь для тех, кому нравится не только понимать самому, но и помогать понимать другим.</p>
+        <div class="role-list">
+          <div class="role"><span class="dot" style="background:var(--butter)"><svg class="icon"><use href="#i-grad"/></svg></span><div><strong>Учитель русского языка и литературы</strong><span>Ведёт уроки, готовит к экзаменам, развивает читательскую культуру.</span></div></div>
+          <div class="role"><span class="dot" style="background:var(--sky)"><svg class="icon"><use href="#i-flask"/></svg></span><div><strong>Преподаватель / методист</strong><span>Создаёт курсы, программы и образовательные материалы.</span></div></div>
+          <div class="role"><span class="dot" style="background:var(--mint)"><svg class="icon"><use href="#i-search"/></svg></span><div><strong>Исследователь литературы</strong><span>Работает с источниками, контекстами и историей текста.</span></div></div>
+        </div>
+      </div>
+      <div class="card career-side">
+        <div><h4>Что прокачивает литература</h4><ul><li>Ясное объяснение терминов</li><li>Работа с источником и цитатой</li><li>Педагогическая интонация</li><li>Системное знание кодификатора</li></ul></div>
+        <div class="first-step"><strong>Первый шаг уже сейчас</strong>Объясни другу один термин на примере из текста: определение, пример, зачем это нужно читателю.</div>
+        <button class="btn btn-primary" type="button" data-goto-dir="education">Педагогические программы <svg class="icon"><use href="#i-arrow"/></svg></button>
+      </div>
+    </div>
+    <p class="footnote">На творческих направлениях часто есть дополнительные вступительные испытания: сочинение, собеседование, портфолио, творческий конкурс. Литература может быть обязательной или входить в набор по выбору — проверяйте правила конкретной программы.</p>
+  </div>
+</section>
+
+<section class="section" id="practice" style="background:linear-gradient(180deg,transparent,var(--sky) 25%,var(--sky) 75%,transparent)">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">04 · Практикум</span>
+      <h2>Попробуй формат — без паники.</h2>
+      <p class="lead">Шесть коротких тренировок по модели ЕГЭ: короткие ответы, анализ фрагмента, сопоставление и сочинение. Черновики сохраняются в браузере, а самопроверка помогает увидеть логику ответа.</p>
+    </div>
+    <div class="format-strip reveal">
+      <div class="format-item"><span class="dot" style="background:var(--mint)"><svg class="icon"><use href="#i-target"/></svg></span><div><strong>11</strong><span>заданий в экзаменационной модели</span></div></div>
+      <div class="format-item"><span class="dot" style="background:var(--butter)"><svg class="icon"><use href="#i-calendar"/></svg></span><div><strong>235</strong><span>минут на выполнение работы</span></div></div>
+      <div class="format-item"><span class="dot" style="background:var(--lav)"><svg class="icon"><use href="#i-pen"/></svg></span><div><strong>1 из 5</strong><span>тем сочинения на выбор</span></div></div>
+    </div>
+    <div class="practice-layout reveal">
+      <aside class="card practice-side">
+        <h3>Тренировки</h3>
+        <div class="task-list" id="taskList"></div>
+        <div class="progress-wrap">
+          <div class="progress-bar"><div class="progress-fill" id="practiceProgress"></div></div>
+          <div class="progress-text"><span id="practiceText">0 из 6 разобрано</span><button class="btn btn-ghost btn-sm" id="resetPractice" type="button">Сбросить</button></div>
+        </div>
+      </aside>
+      <article class="card task-card" id="taskCard"></article>
+    </div>
+    <p class="footnote">Источник формата: открытые демоверсии и спецификации ФИПИ. Приведённые упражнения составлены для этого сайта и не воспроизводят официальный вариант. Цитаты классических текстов приведены в учебных целях. Самопроверка не заменяет экспертную оценку по критериям ФИПИ.</p>
+  </div>
+</section>
+
+<section class="section" id="week">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">05 · Ритм подготовки</span>
+      <h2>Продуктивность — это маленький повторяемый шаг.</h2>
+      <p class="lead">Не пытайся перечитать всё за неделю. Собери спокойный ритм: чтение, один тип задания, повторение и отдых. Отмечай выполненное — прогресс сохранится.</p>
+    </div>
+    <div class="week-head reveal">
+      <div class="progress-wrap" style="flex:1;min-width:240px;margin:0">
+        <div class="progress-bar"><div class="progress-fill" id="weekProgress"></div></div>
+        <div class="progress-text"><span id="weekText">0 из 7 шагов недели</span></div>
+      </div>
+      <button class="btn btn-ghost btn-sm" id="resetWeek" type="button">Начать неделю заново</button>
+    </div>
+    <div class="week-track reveal" id="weekTrack"></div>
+  </div>
+</section>
+
+<section class="section" id="library" style="background:linear-gradient(180deg,transparent,var(--mint) 20%,var(--mint) 80%,transparent)">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">06 · Библиотека кодификатора</span>
+      <h2>Произведения, с которыми стоит подружиться.</h2>
+      <p class="lead">Примеры произведений из кодификатора ЕГЭ по литературе — с авторскими пастельными иллюстрациями и стилизованными портретами авторов. Полный перечень всегда сверяй в актуальном кодификаторе ФИПИ.</p>
+    </div>
+    <div class="lib-controls reveal">
+      <div class="field">
+        <label for="libSearch">Поиск</label>
+        <div class="search-wrap"><svg class="icon"><use href="#i-search"/></svg><input class="input" id="libSearch" type="search" placeholder="Название, автор или тема"></div>
+      </div>
+      <div class="field">
+        <label>Век</label>
+        <div class="era-chips" id="eraChips">
+          <button class="chip sage toggle-btn" type="button" data-era="all" aria-pressed="true">Все</button>
+          <button class="chip toggle-btn" type="button" data-era="19" aria-pressed="false">XIX век</button>
+          <button class="chip toggle-btn" type="button" data-era="20" aria-pressed="false">XX век</button>
+        </div>
+      </div>
+      <div class="field">
+        <label for="libSort">Сортировка</label>
+        <select class="select" id="libSort"><option value="year">По времени</option><option value="title">По названию</option><option value="author">По автору</option></select>
+      </div>
+      <button class="btn btn-ghost toggle-btn" id="libPlan" type="button" aria-pressed="false"><svg class="icon"><use href="#i-bookmark"/></svg> В плане чтения</button>
+    </div>
+    <div class="result-line"><span id="libCount"></span><button class="btn btn-ghost btn-sm" id="libReset" type="button">Сбросить фильтры</button></div>
+    <div class="lib-grid" id="libGrid"></div>
+    <p class="footnote">Иллюстрации и портреты — авторские стилизованные векторные изображения, созданные для этого сайта; это не исторические фотографии и не репродукции конкретных художников. Даты указаны как ориентир: для экзамена важнее текст, проблематика и литературный контекст.</p>
+  </div>
+</section>
+
+<section class="section" id="resources">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">07 · Официальные источники</span>
+      <h2>Проверяй по первоисточнику.</h2>
+      <p class="lead">Этот сайт помогает сориентироваться и потренироваться. Решения о формате экзамена и поступлении принимай по официальным документам.</p>
+    </div>
+    <div class="resources-grid reveal">
+      <a class="card resource" href="https://fipi.ru/ege/demoversii-specifikacii-kodifikatory" target="_blank" rel="noopener">
+        <span class="dot" style="background:var(--mint)"><svg class="icon"><use href="#i-book"/></svg></span>
+        <h3>ФИПИ: демоверсии, спецификации, кодификаторы</h3>
+        <p>Главный источник по структуре КИМ, требованиям и перечню произведений для ЕГЭ своего года.</p>
+        <span class="link">Открыть ФИПИ <svg class="icon"><use href="#i-up-right"/></svg></span>
+      </a>
+      <a class="card resource" href="https://fipi.ru/ege/otkrytyy-bank-zadaniy-ege" target="_blank" rel="noopener">
+        <span class="dot" style="background:var(--butter)"><svg class="icon"><use href="#i-target"/></svg></span>
+        <h3>Открытый банк заданий ЕГЭ</h3>
+        <p>Официальные задания для тренировки. Используй вместе с демоверсией и критериями.</p>
+        <span class="link">Перейти к банку <svg class="icon"><use href="#i-up-right"/></svg></span>
+      </a>
+      <a class="card resource" href="#universities">
+        <span class="dot" style="background:var(--lav)"><svg class="icon"><use href="#i-grad"/></svg></span>
+        <h3>Правила приёма вузов</h3>
+        <p>Перечни вступительных испытаний, минимальные баллы, творческие и дополнительные испытания — на сайтах приёмных комиссий.</p>
+        <span class="link">К подборке вузов <svg class="icon"><use href="#i-arrow"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand" href="#top"><span class="brand-mark"><svg class="icon"><use href="#i-book"/></svg></span><span>Литера<small>ЕГЭ · 2026/27</small></span></a>
+      <p style="margin-top:14px">Независимый учебный сайт о ЕГЭ по литературе. Не является официальным ресурсом ФИПИ, Рособрнадзора или вузов. Сохранённые данные хранятся только в твоём браузере.</p>
+    </div>
+    <div class="footer-links">
+      <a href="#why">Зачем сдавать</a><a href="#universities">Вузы</a><a href="#careers">Профессии</a><a href="#practice">Практикум</a><a href="#library">Библиотека</a><a href="https://fipi.ru/ege/demoversii-specifikacii-kodifikatory" target="_blank" rel="noopener">ФИПИ</a>
+    </div>
+  </div>
+</footer>
+
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="drawer" id="routeDrawer" aria-hidden="true" aria-label="Мой маршрут">
+  <div class="drawer-head">
+    <h2>Мой маршрут</h2>
+    <button class="icon-btn" id="closeDrawer" type="button" aria-label="Закрыть"><svg class="icon"><use href="#i-x"/></svg></button>
+  </div>
+  <div class="drawer-body">
+    <div class="drawer-section">
+      <h3>Вузы <span class="badge" id="drawerUniCount">0</span></h3>
+      <div class="drawer-list" id="drawerUnis"></div>
+    </div>
+    <div class="drawer-section">
+      <h3>План чтения <span class="badge" id="drawerBookCount">0</span></h3>
+      <div class="drawer-list" id="drawerBooks"></div>
+    </div>
+    <div class="drawer-section">
+      <h3>Практикум</h3>
+      <div class="drawer-empty" id="drawerPractice"></div>
+    </div>
+    <div class="drawer-section">
+      <h3>Неделя</h3>
+      <div class="drawer-empty" id="drawerWeek"></div>
+    </div>
+  </div>
+  <div class="drawer-foot">
+    <button class="btn btn-primary" id="downloadPlan" type="button" style="flex:1"><svg class="icon"><use href="#i-download"/></svg> Скачать план</button>
+  </div>
+</aside>
+
+<div class="modal-overlay" id="modalOverlay"></div>
+<div class="modal" id="bookModal" aria-hidden="true">
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="icon-btn modal-close" id="closeModal" type="button" aria-label="Закрыть"><svg class="icon"><use href="#i-x"/></svg></button>
+    <div class="modal-grid">
+      <div class="modal-art" id="modalArt"></div>
+      <div class="modal-content">
+        <div class="modal-author">
+          <span class="book-portrait" id="modalPortrait"></span>
+          <div><div class="book-author" id="modalAuthor"></div><div class="book-meta" id="modalMeta"></div></div>
+        </div>
+        <h2 id="modalTitle"></h2>
+        <div class="book-themes" id="modalThemes" style="margin:14px 0"></div>
+        <p id="modalKey"></p>
+        <h4>Опорные эпизоды и тексты</h4>
+        <ul id="modalEpisodes"></ul>
+        <div class="modal-question" id="modalQuestion"></div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="modalPlan" type="button"><svg class="icon"><use href="#i-bookmark"/></svg> В план чтения</button>
+          <button class="btn btn-soft" id="modalDownload" type="button"><svg class="icon"><use href="#i-download"/></svg> Скачать иллюстрацию</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"><span id="toastMsg"></span><button id="toastAction" type="button" hidden></button></div>
+
+<script>
+(function(){
+"use strict";
+const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
+const KEY="litera-state-v1";
+const UNI=[
+ {id:"msu",name:"МГУ имени М. В. Ломоносова",short:"МГУ",city:"Москва",dir:"philology",program:"Филология",subjects:["Литература","Русский язык","Иностранный язык","ДВИ по русскому языку"],note:"Дополнительное вступительное испытание — часть маршрута; проверяй его формат в правилах приёма.",url:"https://cpk.msu.ru/",color:"var(--mint)"},
+ {id:"hse",name:"НИУ ВШЭ",short:"ВШЭ",city:"Москва",dir:"philology",program:"Филология",subjects:["Литература","Русский язык","Иностранный язык"],note:"Профильные программы могут отличаться по набору предметов и трекам.",url:"https://ba.hse.ru/",color:"var(--sky)"},
+ {id:"spbu",name:"СПбГУ",short:"СПб",city:"Санкт-Петербург",dir:"philology",program:"Отечественная филология",subjects:["Литература","Русский язык","Иностранный язык"],note:"Сверяй набор предметов и минимальные баллы для конкретной образовательной программы.",url:"https://abiturient.spbu.ru/",color:"var(--lav)"},
+ {id:"rggu",name:"РГГУ",short:"РГГУ",city:"Москва",dir:"philology",program:"Отечественная филология",subjects:["Литература","Русский язык","Иностранный / история"],note:"Перечень предметов по выбору зависит от профиля и года приёма.",url:"https://www.rggu.ru/abitur/",color:"var(--peach)"},
+ {id:"mpgu",name:"МПГУ",short:"МПГУ",city:"Москва",dir:"education",program:"Педагогическое образование: Русский язык и литература",subjects:["Литература","Русский язык","Обществознание / иностранный"],note:"Педагогический профиль: литература — профильный предмет вместе с русским языком.",url:"https://abiturient.mpgu.edu/",color:"var(--butter)"},
+ {id:"lit",name:"Литературный институт имени А. М. Горького",short:"ЛИ",city:"Москва",dir:"creative",program:"Литературное творчество",subjects:["Литература","Русский язык","Творческое испытание"],note:"Творческий конкурс — ключевая часть поступления; готовь портфолио текстов заранее.",url:"https://litinstitut.ru/",color:"var(--rose)"}
+];
+const BOOKS=[
+ {id:"onegin",title:"Евгений Онегин",author:"А. С. Пушкин",year:"1833",sortYear:1833,era:"19",genre:"роман в стихах",themes:["выбор","честь","любовь"],key:"Роман о том, как человек учится отвечать за свои чувства и поступки. Лирическая интонация автора соединяется с широким эпическим сюжетом.",episodes:["Письмо Татьяны к Онегину","Дуэль Онегина и Ленского","Финальное объяснение героев"],question:"Почему Татьяна отказывает Онегину, хотя любит его?",art:"art-onegin",portrait:"p-pushkin"},
+ {id:"hero",title:"Герой нашего времени",author:"М. Ю. Лермонтов",year:"1840",sortYear:1840,era:"19",genre:"роман",themes:["лишний человек","свобода","ответственность"],key:"Печорин наблюдает за собой как за экспериментом — и разрушает жизни вокруг. Нарушенная хронология помогает увидеть характер постепенно.",episodes:["Бэла","Княжна Мери","Фаталист"],question:"Можно ли назвать Печорина жертвой времени, если он сам выбирает поступки?",art:"art-hero",portrait:"p-lermontov"},
+ {id:"deadsouls",title:"Мёртвые души",author:"Н. В. Гоголь",year:"1842",sortYear:1842,era:"19",genre:"поэма",themes:["дорога","пошлость","Россия"],key:"Сатира на общество, где живое подменяется вещью, чином и выгодой. Образ дороги становится образом судьбы страны.",episodes:["Приезд Чичикова в губернский город","Плюшкин","Образ птицы-тройки"],question:"Почему поэма называется «Мёртвые души», если речь не только о крепостных?",art:"art-deadsouls",portrait:"p-gogol"},
+ {id:"fathers",title:"Отцы и дети",author:"И. С. Тургенев",year:"1862",sortYear:1862,era:"19",genre:"роман",themes:["конфликт поколений","нигилизм","природа"],key:"Спор идей проверяется любовью, дружбой, семьёй и смертью. Базаров силён как мыслитель, но уязвим как живой человек.",episodes:["Спор Базарова и Павла Петровича","Любовь к Одинцовой","Финал у могилы Базарова"],question:"Что в Базарове сильнее: убеждения или живое чувство?",art:"art-fathers",portrait:"p-turgenev"},
+ {id:"war",title:"Война и мир",author:"Л. Н. Толстой",year:"1865–1869",sortYear:1865,era:"19",genre:"роман-эпопея",themes:["история","семья","народ"],key:"Большая история показана через частные жизни и нравственный поиск. Величие у Толстого связано с простотой, добром и правдой.",episodes:["Первый бал Наташи","Бородинское сражение","Плен Пьера и встреча с Платоном Каратаевым"],question:"Как Толстой понимает величие человека?",art:"art-war",portrait:"p-tolstoy"},
+ {id:"crime",title:"Преступление и наказание",author:"Ф. М. Достоевский",year:"1866",sortYear:1866,era:"19",genre:"роман",themes:["совесть","теория","город"],key:"Идея проверяется не логикой, а последствиями для живой души. Петербург становится пространством давления, одиночества и нравственного выбора.",episodes:["Разговор в трактире о «необыкновенном» человеке","Сон Раскольникова о лошади","Разговоры с Соней и признание"],question:"Почему Петербург в романе похож на участника преступления?",art:"art-crime",portrait:"p-dostoevsky"},
+ {id:"cherry",title:"Вишнёвый сад",author:"А. П. Чехов",year:"1904",sortYear:1904,era:"20",genre:"пьеса",themes:["память","перемены","дом"],key:"Комедия о людях, которые не слышат друг друга и время. Сад — образ дома, памяти и уходящей эпохи.",episodes:["Возвращение Раневской","Аукцион и покупка сада Лопахиным","Прощание с домом и звук лопнувшей струны"],question:"Почему финал звучит и как комедия, и как прощание?",art:"art-cherry",portrait:"p-chekhov"},
+ {id:"master",title:"Мастер и Маргарита",author:"М. А. Булгаков",year:"1966–1967",sortYear:1966,era:"20",genre:"роман",themes:["творчество","власть","милосердие"],key:"Сатира, миф и любовная линия складываются в разговор о свободе творчества, трусости, ответственности и милосердии.",episodes:["Встреча на Патриарших прудах","Бал у Воланда","Судьба рукописи мастера"],question:"Что спасает мастера: слава, любовь или память?",art:"art-master",portrait:"p-bulgakov"},
+ {id:"blok",title:"Стихотворения",author:"А. А. Блок",year:"1898–1921",sortYear:1898,era:"20",genre:"лирика",themes:["город","символ","судьба"],key:"Городские детали становятся знаками тревоги, красоты и исторического перелома. Предметный мир у Блока часто перерастает в символ.",episodes:["«Ночь, улица, фонарь, аптека»","«Незнакомка»","«На железной дороге»"],question:"Как предметная деталь превращается у Блока в символ?",art:"art-blok",portrait:"p-blok"},
+ {id:"requiem",title:"Реквием",author:"А. А. Ахматова",year:"1935–1940",sortYear:1935,era:"20",genre:"поэма",themes:["память","материнское горе","история"],key:"Личное горе становится голосом множества людей и нравственным свидетельством. Память в поэме — не частное чувство, а долг.",episodes:["Посвящение и Вступление","Центральные главы о стоянии под крестами","Эпилог"],question:"Почему память в поэме — не частное чувство, а долг?",art:"art-requiem",portrait:"p-akhmatova"}
+];
+const TASKS=[
+ {id:"t1",kind:"short",label:"Жанр",title:"Определите жанр «Евгения Онегина» А. С. Пушкина.",prompt:"Запишите авторское определение жанра произведения.",accepts:["роман в стихах","роман"],hint:"Вспомните, как сам Пушкин назвал произведение.",explain:"«Евгений Онегин» — роман в стихах: эпическая широта сюжета соединяется с лирической интонацией и стихотворной формой."},
+ {id:"t2",kind:"short",label:"Термин",title:"Как называется изображение природы в художественном произведении?",prompt:"Запишите один литературоведческий термин.",accepts:["пейзаж"],hint:"Это может быть и фоном, и средством характеристики героя.",explain:"Пейзаж — изображение природы. Он может создавать настроение, характеризовать героя, участвовать в композиции и становиться символом."},
+ {id:"t3",kind:"short",label:"Приём",title:"Как называется приём резкого противопоставления образов, понятий или состояний?",prompt:"Запишите один термин.",accepts:["антитеза"],hint:"Приём часто строится на парах: добро — зло, свет — тьма, город — природа.",explain:"Антитеза — резкое противопоставление. Она помогает凸显 конфликт, характер или авторскую оценку."},
+ {id:"t4",kind:"long",label:"Анализ фрагмента",title:"Как описание брички Чичикова помогает понять героя?",prompt:"Прочитайте фрагмент и ответьте в 5–10 предложениях. Опирайтесь на деталь, а не на пересказ.",excerpt:"«В ворота гостиницы губернского города NN въехала довольно красивая рессорная бричка, в какой ездят холостяки: отставные подполковники, штабс-капитаны, помещики, имеющие около сотни душ крестьян, — словом, все те, которых называют господами средней руки.»",source:"Фрагмент: Н. В. Гоголь, «Мёртвые души», глава 1.",model:"Деталь сразу помещает Чичикова в мир «господ средней руки»: он не аристократ, но и не бедняк. Бричка «довольно красивая» — вещь представительная, но не роскошная, как и сам герой, который хочет казаться значительнее, чем есть. Перечисление типов владельцев создаёт ощущение типичности: Чичиков словно собран из готовых социальных масок. Гоголь характеризует героя не прямым приговором, а предметной средой, где статус важнее личности. Такая деталь готовит тему подмены живого человека вещью и чином, которая станет центральной в поэме."},
+ {id:"t5",kind:"long",label:"Сопоставление",title:"Сопоставьте стихотворение Блока с одним стихотворением другого автора о замкнутом времени или безысходности.",prompt:"Укажите общее и различие. Назовите автора и произведение, опирайтесь на образы, а не только на тему.",excerpt:"«Ночь, улица, фонарь, аптека,\nБессмысленный и тусклый свет.\nЖиви ещё хоть четверть века —\nВсё будет так. Исхода нет.»",source:"Фрагмент: А. А. Блок, «Ночь, улица, фонарь, аптека».",model:"Ориентир: сопоставление с «И скучно и грустно» М. Ю. Лермонтова. Общее — ощущение замкнутости и отсутствия выхода: лирический герой не видит будущего, которое изменило бы настоящее. Различие — способ выражения: у Блока безысходность рождается из городской предметной среды и повторяемости образов, а у Лермонтова — из внутреннего монолога, разочарования и невозможности действия. У Блока город становится символом судьбы, у Лермонтова focus перенесён на состояние души. В обоих текстах тема раскрывается через композицию и ключевые образы, а не через прямое рассуждение."},
+ {id:"t6",kind:"essay",label:"Сочинение",title:"Выберите одну тему и напишите сочинение.",prompt:"Тренировочная цель — от 250 слов. Стройте ответ как связное рассуждение: тезис, анализ текста, литературоведческие понятия, вывод.",topics:[
+   {id:"11.1",text:"Почему письмо Татьяны к Онегину становится нравственным выбором, а не только признанием в любви?",plan:"Тезис: письмо — поступок, в котором Татьяна берёт ответственность за чувство. Аргументы: искренность против светской игры; риск быть непонятой; мотив долга и чести в финале романа. Понятия: лирический герой, психологизм, композиция, авторская позиция. Вывод: сила Татьяны — в верности себе и нравственному закону."},
+   {id:"11.2",text:"Как в романе «Отцы и дети» испытывается убеждённость Базарова?",plan:"Тезис: идеи Базарова проверяются не спором, а жизнью. Аргументы: конфликт с Павлом Петровичем; любовь к Одинцовой; отношение к родителям; смерть. Понятия: конфликт, нигилизм, психологизм, деталь. Вывод: Тургенев показывает трагическую сложность человека, который сильнее своей теории."},
+   {id:"11.3",text:"Петербург в «Преступлении и наказании»: пространство преступления или пространство совести?",plan:"Тезис: город одновременно давит на героя и обнажает его совесть. Аргументы: духота, теснота, жёлтый цвет; сон о лошади; мосты и вода; встречи с Соней. Понятия: психологизм, символ, пейзаж, композиция. Вывод: Петербург — не фон, а участник нравственного суда."},
+   {id:"11.4",text:"Что значит «рукописи не горят» в романе «Мастер и Маргарита»?",plan:"Тезис: фраза утверждает неуничтожимость подлинного творчества и памяти. Аргументы: судьба романа о Пилате; мастер и страх; Маргарита как хранительница; финал. Понятия: символ, миф, сатира, композиция. Вывод: текст жив, пока живы любовь, память и ответственность."},
+   {id:"11.5",text:"Как в лирике Блока город становится образом судьбы?",plan:"Тезис: городские детали перерастают в символы замкнутого времени и исторической тревоги. Аргументы: «Ночь, улица, фонарь, аптека»; «Незнакомка»; «На железной дороге». Понятия: символ, лирический герой, композиция, контраст. Вывод: предметный мир у Блока говорит о судьбе человека и эпохи."}
+ ]}
+];
+const WEEK=[
+ {day:"Пн",task:"15–20 страниц + 3 термина",time:"30–40 минут"},
+ {day:"Вт",task:"Один короткий ответ и разбор ошибки",time:"20 минут"},
+ {day:"Ср",task:"Анализ фрагмента: 5–10 предложений",time:"35 минут"},
+ {day:"Чт",task:"Сопоставление двух текстов",time:"35 минут"},
+ {day:"Пт",task:"План сочинения и один абзац",time:"40 минут"},
+ {day:"Сб",task:"Повторение: карточки терминов и эпизодов",time:"25 минут"},
+ {day:"Вс",task:"Отдых и свободное чтение без задания",time:"по желанию"}
+];
+const RUBRIC=["Тезис прямо отвечает на вопрос темы.","Аргументы опираются на текст, а не на пересказ.","Литературоведческие понятия использованы по делу.","Есть логика, композиция и вывод.","Проверены факты, цитаты, орфография и речь."];
+
+let state=load();
+let activeTask=0, currentBook=null, lastFocus=null, toastTimer=null;
+let uniFilters={q:"",city:"all",dir:"all",saved:false,sort:"name"};
+let libFilters={q:"",era:"all",plan:false,sort:"year"};
+
+function load(){
+  try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&typeof s==="object")return Object.assign({savedUnis:[],reading:[],completed:[],drafts:{},week:[]},s);}catch(e){}
+  return {savedUnis:[],reading:[],completed:[],drafts:{},week:[]};
+}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}updateRouteCount();}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function norm(s){return s.toLowerCase().replace(/ё/g,"е").replace(/[^a-zа-я0-9\s]/gi,"").replace(/\s+/g," ").trim();}
+function words(s){return s.trim()?s.trim().split(/\s+/).length:0;}
+function sentences(s){return s.split(/[.!?…]+/).map(x=>x.trim()).filter(Boolean).length;}
+function icon(id,cls){return `<svg class="icon ${cls||""}"><use href="#${id}"/></svg>`;}
+function toast(msg,actionLabel,actionFn){
+  const t=$("#toast"),m=$("#toastMsg"),a=$("#toastAction");
+  m.textContent=msg;clearTimeout(toastTimer);
+  if(actionLabel&&actionFn){a.hidden=false;a.textContent=actionLabel;a.onclick=()=>{actionFn();hideToast();};}else{a.hidden=true;a.onclick=null;}
+  t.classList.add("show");toastTimer=setTimeout(hideToast,4500);
+}
+function hideToast(){$("#toast").classList.remove("show");}
+function updateRouteCount(){$("#routeCount").textContent=state.savedUnis.length+state.reading.length;}
+
+function renderUnis(){
+  let list=UNI.filter(u=>{
+    const q=norm(uniFilters.q);
+    const hay=norm(u.name+" "+u.program+" "+u.city+" "+u.subjects.join(" "));
+    return (!q||hay.includes(q))&&(uniFilters.city==="all"||u.city===uniFilters.city)&&(uniFilters.dir==="all"||u.dir===uniFilters.dir)&&(!uniFilters.saved||state.savedUnis.includes(u.id));
+  });
+  list.sort((a,b)=>uniFilters.sort==="city"?a.city.localeCompare(b.city,"ru")||a.name.localeCompare(b.name,"ru"):a.name.localeCompare(b.name,"ru"));
+  $("#uniCount").textContent=`Найдено программ: ${list.length}`;
+  $("#uniSaved").setAttribute("aria-pressed",String(uniFilters.saved));
+  const grid=$("#uniGrid");
+  if(!list.length){grid.innerHTML=`<div class="empty" style="grid-column:1/-1"><h3>Ничего не найдено</h3><p>Попробуйте убрать фильтры или сохранить больше программ.</p><button class="btn btn-soft" type="button" data-reset-uni>Сбросить фильтры</button></div>`;return;}
+  grid.innerHTML=list.map(u=>{
+    const saved=state.savedUnis.includes(u.id);
+    return `<article class="card uni-card">
+      <div class="uni-top"><span class="crest" style="background:${u.color}">${esc(u.short)}</span><div><div class="uni-city">${esc(u.city)}</div><h3>${esc(u.name)}</h3></div></div>
+      <div class="uni-program">${esc(u.program)}</div>
+      <div class="uni-subjects">${u.subjects.map((s,i)=>`<span class="chip ${i===0?"sage":""}">${esc(s)}</span>`).join("")}</div>
+      <div class="uni-note">${esc(u.note)}</div>
+      <div class="uni-actions">
+        <button class="btn btn-ghost btn-sm save-btn" type="button" data-save-uni="${u.id}" aria-pressed="${saved}">${icon("i-bookmark",saved?"fill":"")} ${saved?"Сохранено":"В маршрут"}</button>
+        <a class="btn btn-soft btn-sm" href="${u.url}" target="_blank" rel="noopener">Сайт приёма ${icon("i-up-right")}</a>
+      </div>
+    </article>`;
+  }).join("");
+}
+function toggleUni(id){
+  const i=state.savedUnis.indexOf(id),u=UNI.find(x=>x.id===id);
+  if(i>=0){state.savedUnis.splice(i,1);save();renderUnis();renderDrawer();toast(`«${u.name}» убран из маршрута`,"Вернуть",()=>{state.savedUnis.push(id);save();renderUnis();renderDrawer();});}
+  else{state.savedUnis.push(id);save();renderUnis();renderDrawer();toast(`«${u.name}» добавлен в маршрут`,"Отменить",()=>{state.savedUnis=state.savedUnis.filter(x=>x!==id);save();renderUnis();renderDrawer();});}
+}
+function renderLibs(){
+  let list=BOOKS.filter(b=>{
+    const q=norm(libFilters.q);
+    const hay=norm(b.title+" "+b.author+" "+b.themes.join(" ")+" "+b.genre);
+    return (!q||hay.includes(q))&&(libFilters.era==="all"||b.era===libFilters.era)&&(!libFilters.plan||state.reading.includes(b.id));
+  });
+  list.sort((a,b)=>libFilters.sort==="title"?a.title.localeCompare(b.title,"ru"):libFilters.sort==="author"?a.author.localeCompare(b.author,"ru"):a.sortYear-b.sortYear);
+  $("#libCount").textContent=`Произведений: ${list.length}`;
+  $("#libPlan").setAttribute("aria-pressed",String(libFilters.plan));
+  $$("#eraChips [data-era]").forEach(btn=>{const on=btn.dataset.era===libFilters.era;btn.setAttribute("aria-pressed",String(on));btn.classList.toggle("sage",on);});
+  const grid=$("#libGrid");
+  if(!list.length){grid.innerHTML=`<div class="empty" style="grid-column:1/-1"><h3>Пока пусто</h3><p>Измените фильтры или добавьте произведения в план чтения.</p><button class="btn btn-soft" type="button" data-reset-lib>Сбросить фильтры</button></div>`;return;}
+  grid.innerHTML=list.map(b=>{
+    const saved=state.reading.includes(b.id);
+    return `<article class="card book-card">
+      <div class="book-art"><svg viewBox="0 0 600 400" role="img" aria-label="Иллюстрация к произведению «${esc(b.title)}»"><use href="#${b.art}"/></svg><span class="book-portrait"><svg viewBox="0 0 200 200" role="img" aria-label="Стилизованный портрет: ${esc(b.author)}"><use href="#${b.portrait}"/></svg></span></div>
+      <div class="book-body">
+        <div class="book-author">${esc(b.author)}</div>
+        <h3>${esc(b.title)}</h3>
+        <div class="book-meta">${esc(b.genre)} · ${esc(b.year)}</div>
+        <div class="book-themes">${b.themes.map(t=>`<span class="chip">${esc(t)}</span>`).join("")}</div>
+        <div class="book-actions">
+          <button class="btn btn-soft btn-sm" type="button" data-open-book="${b.id}">О произведении</button>
+          <button class="btn btn-ghost btn-sm save-btn" type="button" data-save-book="${b.id}" aria-pressed="${saved}" aria-label="${saved?"Убрать из плана":"Добавить в план"}">${icon("i-bookmark",saved?"fill":"")}</button>
+        </div>
+      </div>
+    </article>`;
+  }).join("");
+}
+function toggleBook(id){
+  const i=state.reading.indexOf(id),b=BOOKS.find(x=>x.id===id);
+  if(i>=0){state.reading.splice(i,1);save();renderLibs();renderDrawer();updateModalPlan();toast(`«${b.title}» убрано из плана чтения`,"Вернуть",()=>{state.reading.push(id);save();renderLibs();renderDrawer();updateModalPlan();});}
+  else{state.reading.push(id);save();renderLibs();renderDrawer();updateModalPlan();toast(`«${b.title}» добавлено в план чтения`,"Отменить",()=>{state.reading=state.reading.filter(x=>x!==id);save();renderLibs();renderDrawer();updateModalPlan();});}
+}
+function openBook(id){
+  const b=BOOKS.find(x=>x.id===id);if(!b)return;currentBook=b;lastFocus=document.activeElement;
+  $("#modalArt").innerHTML=`<svg viewBox="0 0 600 400" role="img" aria-label="Иллюстрация к произведению «${esc(b.title)}»"><use href="#${b.art}"/></svg>`;
+  $("#modalPortrait").innerHTML=`<svg viewBox="0 0 200 200" role="img" aria-label="Стилизованный портрет: ${esc(b.author)}"><use href="#${b.portrait}"/></svg>`;
+  $("#modalAuthor").textContent=b.author;$("#modalMeta").textContent=`${b.genre} · ${b.year}`;
+  $("#modalTitle").textContent=b.title;$("#modalKey").textContent=b.key;
+  $("#modalThemes").innerHTML=b.themes.map(t=>`<span class="chip sage">${esc(t)}</span>`).join("");
+  $("#modalEpisodes").innerHTML=b.episodes.map(e=>`<li>${esc(e)}</li>`).join("");
+  $("#modalQuestion").textContent="Вопрос для размышления: "+b.question;
+  updateModalPlan();
+  $("#bookModal").classList.add("open");$("#modalOverlay").classList.add("open");$("#bookModal").setAttribute("aria-hidden","false");document.body.classList.add("no-scroll");$("#closeModal").focus();
+}
+function updateModalPlan(){
+  if(!currentBook)return;const saved=state.reading.includes(currentBook.id);
+  $("#modalPlan").innerHTML=icon("i-bookmark",saved?"fill":"")+(saved?" В плане чтения":" В план чтения");
+  $("#modalPlan").classList.toggle("btn-soft",saved);$("#modalPlan").classList.toggle("btn-primary",!saved);
+}
+function closeModal(){$("#bookModal").classList.remove("open");$("#modalOverlay").classList.remove("open");$("#bookModal").setAttribute("aria-hidden","true");document.body.classList.remove("no-scroll");if(lastFocus)lastFocus.focus();}
+function downloadSVG(symbolId,name){
+  const sym=document.getElementById(symbolId),defs=document.querySelector(".svg-defs defs");
+  if(!sym||!defs)return;
+  const svg=`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="1200" height="800">${defs.outerHTML}${sym.innerHTML}</svg>`;
+  const blob=new Blob([svg],{type:"image/svg+xml;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");
+  a.href=url;a.download=name+".svg";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function renderPractice(){
+  const list=$("#taskList");
+  list.innerHTML=TASKS.map((t,i)=>`<button class="task-item ${i===activeTask?"active":""} ${state.completed.includes(t.id)?"done":""}" type="button" data-task="${i}"><span class="task-num">${state.completed.includes(t.id)?icon("i-check"):String(i+1).padStart(2,"0")}</span><span><strong>${esc(t.label)}</strong><span>${t.kind==="short"?"Короткий ответ":t.kind==="essay"?"Сочинение":"Развёрнутый ответ"}</span></span></button>`).join("");
+  const done=state.completed.length;$("#practiceProgress").style.width=(done/TASKS.length*100)+"%";$("#practiceText").textContent=`${done} из ${TASKS.length} разобрано`;
+  const t=TASKS[activeTask],draft=state.drafts[t.id]||"";
+  let input="";
+  if(t.kind==="short")input=`<div class="task-input"><label class="field"><span style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Ваш ответ</span><input class="input" id="answerInput" type="text" value="${esc(draft)}" placeholder="Запишите слово или словосочетание" autocomplete="off"></label></div>`;
+  else if(t.kind==="essay"){
+    const topic=state.drafts[t.id+"-topic"]||t.topics[0].id;
+    input=`<div class="task-input"><label class="field"><span style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Тема сочинения</span><select class="select" id="topicSelect">${t.topics.map(tp=>`<option value="${tp.id}" ${tp.id===topic?"selected":""}>${tp.id}. ${esc(tp.text)}</option>`).join("")}</select></label></div>
+    <div class="task-input"><label class="field"><span style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Черновик сочинения</span><textarea class="textarea" id="answerInput" placeholder="Тезис, аргументы, анализ текста, вывод…">${esc(draft)}</textarea></label></div>`;
+  } else input=`<div class="task-input"><label class="field"><span style="font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)">Ваш ответ</span><textarea class="textarea" id="answerInput" placeholder="Пишите связно: тезис, опора на текст, вывод…">${esc(draft)}</textarea></label></div>`;
+  const counts=t.kind==="short"?"":`<div class="count-line"><span id="countWords">Слов: ${words(draft)}</span><span id="countSentences">Предложений: ${sentences(draft)}</span><span id="draftStatus">Черновик сохраняется автоматически</span></div>`;
+  const model=t.kind==="essay"?`<div class="model-body" id="modelAnswer">${esc(t.topics.find(x=>x.id===(state.drafts[t.id+"-topic"]||t.topics[0].id)).plan)}</div>`:`<div class="model-body">${esc(t.model)}</div>`;
+  $("#taskCard").innerHTML=`
+    <div class="task-meta"><span class="chip sage">${esc(t.label)}</span><span class="chip">${t.kind==="short"?"Короткий ответ":t.kind==="essay"?"Задание 11 · сочинение":"Развёрнутый ответ"}</span>${state.completed.includes(t.id)?`<span class="chip butter">${icon("i-check")} Разобрано</span>`:""}</div>
+    <h3>${esc(t.title)}</h3>
+    <p class="lead" style="margin-bottom:14px">${esc(t.prompt)}</p>
+    <div class="task-source">Авторское упражнение по модели ФИПИ · не официальный вариант${t.source?" · "+esc(t.source):""}</div>
+    ${t.excerpt?`<blockquote class="excerpt">${esc(t.excerpt)}</blockquote>`:""}
+    ${input}${counts}
+    <div class="task-actions">
+      <button class="btn btn-primary" id="checkTask" type="button">${icon("i-check")} ${t.kind==="short"?"Проверить ответ":"Проверить себя"}</button>
+      <button class="btn btn-soft" id="markDone" type="button" ${t.kind==="short"?"hidden":""}>${icon("i-bookmark")} Отметить как разобранное</button>
+      <button class="btn btn-ghost" id="nextTask" type="button">Дальше ${icon("i-arrow")}</button>
+      ${t.kind!=="short"?`<button class="btn btn-ghost" id="downloadDraft" type="button">${icon("i-download")} Скачать черновик</button><button class="btn btn-ghost" id="clearDraft" type="button">${icon("i-trash")} Очистить</button>`:""}
+    </div>
+    <div id="feedback" aria-live="polite"></div>
+    ${t.kind!=="short"?`<details class="model" id="modelDetails"><summary>Ориентир для самопроверки ${icon("i-chevron")}</summary>${model}</details>
+    <div class="rubric"><strong style="font-size:.9rem">Чек-лист самопроверки</strong>${RUBRIC.map((r,i)=>`<label><input type="checkbox" data-rubric="${i}"> ${esc(r)}</label>`).join("")}</div>`:""}
+  `;
+  bindTaskEvents();
+}
+function bindTaskEvents(){
+  const t=TASKS[activeTask],input=$("#answerInput");
+  if(input){
+    input.addEventListener("input",()=>{
+      state.drafts[t.id]=input.value;save();
+      if($("#countWords")){$("#countWords").textContent="Слов: "+words(input.value);$("#countSentences").textContent="Предложений: "+sentences(input.value);$("#draftStatus").textContent="Черновик сохранён";}
+    });
+  }
+  const topic=$("#topicSelect");
+  if(topic)topic.addEventListener("change",()=>{state.drafts[t.id+"-topic"]=topic.value;save();const tp=t.topics.find(x=>x.id===topic.value);if($("#modelAnswer"))$("#modelAnswer").textContent=tp.plan;});
+  $("#checkTask").addEventListener("click",checkTask);
+  $("#nextTask").addEventListener("click",()=>{activeTask=(activeTask+1)%TASKS.length;renderPractice();});
+  const mark=$("#markDone");if(mark)mark.addEventListener("click",()=>{completeTask(t.id);});
+  const dl=$("#downloadDraft");if(dl)dl.addEventListener("click",()=>{
+    const text=(t.kind==="essay"?("Тема: "+(t.topics.find(x=>x.id===(state.drafts[t.id+"-topic"]||t.topics[0].id)).text)+"\n\n"):"")+ (state.drafts[t.id]||"");
+    const blob=new Blob([text||"Черновик пока пуст."],{type:"text/plain;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="litera-draft-"+t.id+".txt";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  });
+  const clear=$("#clearDraft");if(clear)clear.addEventListener("click",()=>{const old=state.drafts[t.id]||"";state.drafts[t.id]="";save();renderPractice();toast("Черновик очищен","Вернуть",()=>{state.drafts[t.id]=old;save();renderPractice();});});
+}
+function completeTask(id){if(!state.completed.includes(id)){state.completed.push(id);save();renderPractice();renderDrawer();toast("Задание отмечено как разобранное");}}
+function checkTask(){
+  const t=TASKS[activeTask],input=$("#answerInput"),fb=$("#feedback"),val=input?input.value:"";
+  if(t.kind==="short"){
+    const n=norm(val);
+    if(!n){fb.innerHTML=`<div class="feedback warn"><strong>Пока пусто</strong>Запишите ответ, даже если не уверены.</div>`;return;}
+    if(t.accepts.some(a=>norm(a)===n)){fb.innerHTML=`<div class="feedback ok"><strong>Верно</strong>${esc(t.explain)}</div>`;completeTask(t.id);}
+    else fb.innerHTML=`<div class="feedback warn"><strong>Пока не совпало</strong>${esc(t.hint)}<br><br><strong style="display:inline">Ориентир:</strong> ${esc(t.explain)}</div>`;
+    return;
+  }
+  const w=words(val),s=sentences(val);
+  if(w<8){fb.innerHTML=`<div class="feedback warn"><strong>Слишком коротко</strong>Напишите хотя бы несколько предложений, чтобы было что проверять. Черновик можно сохранить и вернуться позже.</div>`;return;}
+  let msg="";
+  if(t.kind==="essay"){msg=w>=250?`Объём тренировочной цели достигнут: ${w} слов.`:`Тренировочная цель — от 250 слов; сейчас ${w}. Можно продолжить или открыть план темы.`;}
+  else{msg=(s>=5&&s<=10)?`Объём ответа в ориентире: ${s} предложений.`:`Ориентир для развёрнутого ответа — 5–10 предложений; сейчас ${s}.`;}
+  fb.innerHTML=`<div class="feedback info"><strong>Самопроверка</strong>${esc(msg)} Откройте ориентир ниже и пройдитесь по чек-листу. Это не автоматическая оценка по критериям ФИПИ.</div>`;
+  const d=$("#modelDetails");if(d)d.open=true;
+}
+function renderWeek(){
+  $("#weekTrack").innerHTML=WEEK.map((w,i)=>{const done=state.week.includes(i);return `<div class="card week-card ${done?"done":""}"><span class="day">${w.day}</span><label><input type="checkbox" data-week="${i}" ${done?"checked":""}> ${esc(w.task)}</label><span>${esc(w.time)}</span></div>`;}).join("");
+  const done=state.week.length;$("#weekProgress").style.width=(done/WEEK.length*100)+"%";$("#weekText").textContent=`${done} из ${WEEK.length} шагов недели`;
+}
+function renderDrawer(){
+  $("#drawerUniCount").textContent=state.savedUnis.length;$("#drawerBookCount").textContent=state.reading.length;
+  const unis=$("#drawerUnis");
+  unis.innerHTML=state.savedUnis.length?state.savedUnis.map(id=>{const u=UNI.find(x=>x.id===id);if(!u)return"";return `<div class="drawer-item"><span class="crest" style="background:${u.color};width:44px;height:44px;font-size:1rem">${esc(u.short)}</span><div><strong>${esc(u.name)}</strong><span>${esc(u.program)}</span></div><button class="icon-btn" type="button" data-remove-uni="${u.id}" aria-label="Убрать">${icon("i-x")}</button></div>`;}).join(""):`<div class="drawer-empty">Пока нет сохранённых вузов. Добавляй программы из раздела «Вузы».</div>`;
+  const books=$("#drawerBooks");
+  books.innerHTML=state.reading.length?state.reading.map(id=>{const b=BOOKS.find(x=>x.id===id);if(!b)return"";return `<div class="drawer-item"><span class="thumb"><svg viewBox="0 0 600 400"><use href="#${b.art}"/></svg></span><div><strong>${esc(b.title)}</strong><span>${esc(b.author)}</span></div><button class="icon-btn" type="button" data-remove-book="${b.id}" aria-label="Убрать">${icon("i-x")}</button></div>`;}).join(""):`<div class="drawer-empty">План чтения пуст. Добавляй произведения из библиотеки.</div>`;
+  $("#drawerPractice").textContent=`Разобрано заданий: ${state.completed.length} из ${TASKS.length}.`;
+  $("#drawerWeek").textContent=`Шагов недели выполнено: ${state.week.length} из ${WEEK.length}.`;
+}
+function openDrawer(){lastFocus=document.activeElement;$("#routeDrawer").classList.add("open");$("#drawerOverlay").classList.add("open");$("#routeDrawer").setAttribute("aria-hidden","false");document.body.classList.add("no-scroll");$("#closeDrawer").focus();}
+function closeDrawer(){$("#routeDrawer").classList.remove("open");$("#drawerOverlay").classList.remove("open");$("#routeDrawer").setAttribute("aria-hidden","true");document.body.classList.remove("no-scroll");if(lastFocus)lastFocus.focus();}
+function setCareer(key){
+  $$(".tab").forEach(t=>{const on=t.dataset.career===key;t.setAttribute("aria-selected",String(on));t.tabIndex=on?0:-1;});
+  $$(".career-panel").forEach(p=>p.hidden=p.id!=="panel-"+key);
+}
+function downloadPlan(){
+  let text="ЛИТЕРА · МОЙ МАРШРУТ\nЕГЭ по литературе · сезон 2026–2027\n\nВУЗЫ\n";
+  text+=state.savedUnis.length?state.savedUnis.map(id=>{const u=UNI.find(x=>x.id===id);return u?`— ${u.name}: ${u.program} (${u.city}). Предметы: ${u.subjects.join(", ")}. Сайт: ${u.url}`:"";}).filter(Boolean).join("\n"):"— пока пусто";
+  text+="\n\nПЛАН ЧТЕНИЯ\n";
+  text+=state.reading.length?state.reading.map(id=>{const b=BOOKS.find(x=>x.id===id);return b?`— ${b.author}, «${b.title}» (${b.genre}, ${b.year}). Вопрос: ${b.question}`:"";}).filter(Boolean).join("\n"):"— пока пусто";
+  text+=`\n\nПРАКТИКУМ\nРазобрано: ${state.completed.length} из ${TASKS.length}.\n\nНЕДЕЛЯ\n`;
+  text+=WEEK.map((w,i)=>`${state.week.includes(i)?"[x]":"[ ]"} ${w.day}: ${w.task} (${w.time})`).join("\n");
+  text+="\n\nВажно: сверяйте формат экзамена по документам ФИПИ своего года, а правила приёма — на сайтах вузов.";
+  const blob=new Blob([text],{type:"text/plain;charset=utf-8"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="litera-my-route.txt";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+
+$("#uniSearch").addEventListener("input",e=>{uniFilters.q=e.target.value;renderUnis();});
+$("#uniCity").addEventListener("change",e=>{uniFilters.city=e.target.value;renderUnis();});
+$("#uniDir").addEventListener("change",e=>{uniFilters.dir=e.target.value;renderUnis();});
+$("#uniSort").addEventListener("change",e=>{uniFilters.sort=e.target.value;renderUnis();});
+$("#uniSaved").addEventListener("click",()=>{uniFilters.saved=!uniFilters.saved;renderUnis();});
+$("#uniReset").addEventListener("click",()=>{uniFilters={q:"",city:"all",dir:"all",saved:false,sort:"name"};$("#uniSearch").value="";$("#uniCity").value="all";$("#uniDir").value="all";$("#uniSort").value="name";renderUnis();});
+$("#uniGrid").addEventListener("click",e=>{const s=e.target.closest("[data-save-uni]");if(s)toggleUni(s.dataset.saveUni);if(e.target.closest("[data-reset-uni]"))$("#uniReset").click();});
+$("#libSearch").addEventListener("input",e=>{libFilters.q=e.target.value;renderLibs();});
+$("#libSort").addEventListener("change",e=>{libFilters.sort=e.target.value;renderLibs();});
+$("#libPlan").addEventListener("click",()=>{libFilters.plan=!libFilters.plan;renderLibs();});
+$("#eraChips").addEventListener("click",e=>{const b=e.target.closest("[data-era]");if(b){libFilters.era=b.dataset.era;renderLibs();}});
+$("#libReset").addEventListener("click",()=>{libFilters={q:"",era:"all",plan:false,sort:"year"};$("#libSearch").value="";$("#libSort").value="year";renderLibs();});
+$("#libGrid").addEventListener("click",e=>{const o=e.target.closest("[data-open-book]");if(o)openBook(o.dataset.openBook);const s=e.target.closest("[data-save-book]");if(s)toggleBook(s.dataset.saveBook);if(e.target.closest("[data-reset-lib]"))$("#libReset").click();});
+$("#taskList").addEventListener("click",e=>{const b=e.target.closest("[data-task]");if(b){activeTask=Number(b.dataset.task);renderPractice();}});
+$("#resetPractice").addEventListener("click",()=>{const old=[...state.completed];state.completed=[];save();renderPractice();renderDrawer();toast("Прогресс практикума сброшен","Вернуть",()=>{state.completed=old;save();renderPractice();renderDrawer();});});
+$("#weekTrack").addEventListener("change",e=>{const c=e.target.closest("[data-week]");if(!c)return;const i=Number(c.dataset.week);if(c.checked){if(!state.week.includes(i))state.week.push(i);}else state.week=state.week.filter(x=>x!==i);save();renderWeek();renderDrawer();});
+$("#resetWeek").addEventListener("click",()=>{const old=[...state.week];state.week=[];save();renderWeek();renderDrawer();toast("Неделя начата заново","Вернуть",()=>{state.week=old;save();renderWeek();renderDrawer();});});
+$$(".tab").forEach(tab=>{
+  tab.addEventListener("click",()=>setCareer(tab.dataset.career));
+  tab.addEventListener("keydown",e=>{const tabs=$$(".tab"),i=tabs.indexOf(tab);if(e.key==="ArrowRight"||e.key==="ArrowLeft"){e.preventDefault();const n=(i+(e.key==="ArrowRight"?1:-1)+tabs.length)%tabs.length;tabs[n].focus();setCareer(tabs[n].dataset.career);}});
+});
+$$("[data-goto-dir]").forEach(b=>b.addEventListener("click",()=>{uniFilters.dir=b.dataset.gotoDir;$("#uniDir").value=uniFilters.dir;renderUnis();document.getElementById("universities").scrollIntoView({behavior:"smooth"});}));
+$("#routeBtn").addEventListener("click",openDrawer);
+$("#closeDrawer").addEventListener("click",closeDrawer);
+$("#drawerOverlay").addEventListener("click",closeDrawer);
+$("#drawerUnis").addEventListener("click",e=>{const b=e.target.closest("[data-remove-uni]");if(b)toggleUni(b.dataset.removeUni);});
+$("#drawerBooks").addEventListener("click",e=>{const b=e.target.closest("[data-remove-book]");if(b)toggleBook(b.dataset.removeBook);});
+$("#downloadPlan").addEventListener("click",downloadPlan);
+$("#closeModal").addEventListener("click",closeModal);
+$("#modalOverlay").addEventListener("click",closeModal);
+$("#modalPlan").addEventListener("click",()=>{if(currentBook)toggleBook(currentBook.id);});
+$("#modalDownload").addEventListener("click",()=>{if(currentBook)downloadSVG(currentBook.art,"litera-"+currentBook.id);});
+$("#menuBtn").addEventListener("click",()=>{const nav=$("#mainNav"),open=nav.classList.toggle("open");$("#menuBtn").setAttribute("aria-expanded",String(open));});
+$$("#mainNav a").forEach(a=>a.addEventListener("click",()=>{$("#mainNav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");}));
+document.addEventListener("keydown",e=>{
+  if(e.key==="Escape"){if($("#bookModal").classList.contains("open"))closeModal();else if($("#routeDrawer").classList.contains("open"))closeDrawer();else{$("#mainNav").classList.remove("open");$("#menuBtn").setAttribute("aria-expanded","false");}}
+  if(e.key==="Tab"){
+    const box=$("#bookModal").classList.contains("open")?$("#bookModal .modal-dialog"):$("#routeDrawer").classList.contains("open")?$("#routeDrawer"):null;
+    if(!box)return;
+    const f=Array.from(box.querySelectorAll('a[href],button:not([disabled]),input,select,textarea,[tabindex]:not([tabindex="-1"])')).filter(el=>el.offsetParent!==null);
+    if(!f.length)return;const first=f[0],last=f[f.length-1];
+    if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+    else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+  }
+});
+const header=$("#siteHeader"),progress=$("#scrollProgress");
+function onScroll(){
+  const y=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;
+  header.classList.toggle("scrolled",y>10);progress.style.width=(h>0?(y/h*100):0)+"%";
+}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+const reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+if("IntersectionObserver" in window&&!reduced){
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target);}}),{threshold:.12});
+  $$(".reveal").forEach(el=>io.observe(el));
+  const sections=$$("main section[id]");
+  const navIo=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){$$("#mainNav a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+en.target.id));}}),{rootMargin:"-40% 0px -55% 0px"});
+  sections.forEach(s=>navIo.observe(s));
+}else{$$(".reveal").forEach(el=>el.classList.add("in"));}
+renderUnis();renderLibs();renderPractice();renderWeek();renderDrawer();updateRouteCount();setCareer("word");
+})();
+</script>
+</body>
+</html>
