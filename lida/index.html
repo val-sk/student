@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мой потрясающий сайт ИксановаЛидия — ЕГЭ по английскому</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Golos+Text:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0c1f36; --navy-2:#14324f;
+  --ink:#182430; --muted:#5b6b7c;
+  --paper:#ffffff; --paper-2:#f5f8fc;
+  --blue-bg:#dfeaf6;
+  --red:#c8102e; --gold:#d9a441;
+  --line:#d9e2ec;
+  --rule:rgba(70,120,180,.14);
+  --ease:cubic-bezier(.22,.75,.25,1);
+  --head-h:76px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head-h) + 28px)}
+body{font-family:"Golos Text",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.65;font-size:17px;overflow-x:hidden}
+::selection{background:var(--navy);color:#fff}
+img{max-width:100%;display:block}
+a{color:inherit}
+
+/* ===== зернистость плёнки ===== */
+.noise{position:fixed;inset:0;z-index:90;pointer-events:none;opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ================= ШАПКА (всегда видна) ================= */
+.site-head{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);color:#fff;
+  border-bottom:1px solid rgba(255,255,255,.10);transition:box-shadow .35s var(--ease)}
+.site-head.scrolled{box-shadow:0 12px 34px rgba(6,16,30,.45)}
+.head-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;gap:1.6rem;padding:.7rem 24px}
+.brand{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.seal{width:42px;height:42px;flex:0 0 42px;border:1.5px solid var(--gold);border-radius:50%;display:grid;place-items:center;
+  font-family:"Playfair Display",serif;font-weight:800;color:var(--gold);letter-spacing:.03em;font-size:1rem}
+.brand-text small{display:block;font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.62)}
+.brand-text strong{font-family:"Playfair Display",serif;font-size:1.12rem;font-weight:700;letter-spacing:.02em}
+.site-head nav{margin-left:auto;display:flex;gap:1.5rem;overflow-x:auto}
+.site-head nav a{position:relative;text-decoration:none;font-size:.68rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.78);white-space:nowrap;padding:.4rem 0;transition:color .3s}
+.site-head nav a i{font-style:normal;color:var(--red);background:rgba(255,255,255,.92);padding:.08rem .3rem;margin-right:.4rem;font-size:.62rem}
+.site-head nav a::after{content:"";position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--red);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease)}
+.site-head nav a:hover,.site-head nav a.active{color:#fff}
+.site-head nav a:hover::after,.site-head nav a.active::after{transform:scaleX(1)}
+.badge-max{border:1px solid var(--gold);color:var(--gold);font-size:.64rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;padding:.42rem .8rem;border-radius:999px;white-space:nowrap}
+.progress{position:absolute;left:0;right:0;top:0;height:3px;background:rgba(255,255,255,.12)}
+.progress span{display:block;height:100%;width:0;background:var(--red)}
+
+main{padding-top:var(--head-h)}
+.section{position:relative;overflow:hidden;padding:5.5rem 0 5rem}
+.section.white{background:
+  linear-gradient(90deg, transparent 0, transparent 92px, rgba(200,16,46,.13) 92px, rgba(200,16,46,.13) 93px, transparent 93px),
+  repeating-linear-gradient(180deg, transparent 0 31px, var(--rule) 31px 32px),
+  var(--paper)}
+.section.blue{background:
+  repeating-linear-gradient(0deg, transparent 0 23px, rgba(255,255,255,.5) 23px 24px),
+  repeating-linear-gradient(90deg, transparent 0 23px, rgba(255,255,255,.5) 23px 24px),
+  var(--blue-bg)}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+
+.sec-label{display:inline-flex;align-items:center;gap:.65rem;font-size:.7rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:var(--red)}
+.sec-label::before{content:"";width:36px;height:2px;background:var(--red)}
+.sec-title{font-family:"Playfair Display",serif;font-weight:800;color:var(--navy);font-size:clamp(1.9rem,4.3vw,3.1rem);line-height:1.12;margin:.7rem 0 .9rem;max-width:20ch}
+.sec-sub{color:var(--muted);max-width:56ch}
+
+/* маска-появление заголовков по словам */
+.lm .w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em;margin-bottom:-.1em}
+.lm .w i{display:inline-block;font-style:normal;transform:translateY(115%);transition:transform .9s var(--ease)}
+.in .lm .w i{transform:translateY(0)}
+
+/* появление блоков при прокрутке */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ================= РАЗДЕЛ 1 ================= */
+.exam-sheet{position:relative;background:#fff;border:1.5px solid var(--ink);margin:2.4rem 0 0;box-shadow:12px 12px 0 var(--blue-bg)}
+.sheet-top{display:flex;align-items:center;gap:1.2rem;padding:.9rem 1.6rem;border-bottom:1.5px solid var(--ink);flex-wrap:wrap}
+.sheet-top .doc{font-size:.72rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase}
+.sheet-top .doc b{color:var(--red)}
+.barcode{margin-left:auto;width:130px;height:26px;background:repeating-linear-gradient(90deg,var(--ink) 0 2px,transparent 2px 5px,var(--ink) 5px 6px,transparent 6px 10px)}
+.sheet-top .form{font-size:.68rem;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.sheet-body{display:grid;grid-template-columns:1.15fr .85fr;gap:2rem;padding:2.2rem 1.6rem 2.4rem}
+.fields{display:grid;gap:.9rem;align-content:start}
+.field{display:grid;grid-template-columns:150px 1fr;gap:1rem;border-bottom:1px solid var(--line);padding-bottom:.6rem}
+.field dt{font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-top:.35rem}
+.field dd{font-weight:600}
+.field dd em{font-family:"Caveat",cursive;font-style:normal;font-size:1.25rem;color:var(--navy)}
+.check{width:26px;height:26px;color:var(--red);vertical-align:-6px;margin-left:.4rem}
+.check path{stroke-dasharray:42;stroke-dashoffset:42}
+.in .check path{animation:draw .7s var(--ease) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.sheet-right{text-align:center;display:flex;flex-direction:column;justify-content:center;gap:.6rem;border-left:1px dashed var(--line);padding-left:2rem}
+.sheet-right small{font-size:.66rem;font-weight:800;letter-spacing:.26em;text-transform:uppercase;color:var(--muted)}
+.scramble{font-family:"Playfair Display",serif;font-weight:800;font-size:clamp(2rem,4.6vw,3.4rem);color:var(--navy);line-height:1.05;min-height:1.15em;letter-spacing:.01em}
+.sheet-right .sub{font-size:.85rem;color:var(--muted)}
+.stamp{position:absolute;right:-12px;top:-20px;transform:rotate(7deg) scale(1.15);border:3px solid var(--red);color:var(--red);
+  padding:.35rem 1rem;font-family:"Caveat",cursive;font-weight:700;font-size:1.45rem;line-height:1.1;border-radius:6px;background:rgba(255,255,255,.75);
+  opacity:0;transition:opacity .5s,transform .9s var(--ease);pointer-events:none;text-align:center;z-index:2}
+.in .stamp{opacity:1;transform:rotate(-6deg) scale(1)}
+
+.ticker{background:var(--red);color:#fff;overflow:hidden;margin:2.8rem 0 3.2rem}
+.ticker-track{display:flex;width:max-content;animation:tick 26s linear infinite}
+.ticker span{padding:.55rem 1.4rem;font-size:.72rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap}
+.ticker b{color:#ffd9de;font-family:"Caveat",cursive;font-weight:700;font-size:1.05rem;letter-spacing:.05em;text-transform:none}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+.s1-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:start}
+.blocks{display:grid;gap:1.6rem}
+.block{background:#fff;border:1px solid var(--line);padding:2rem;position:relative;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.section.white .block:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(12,31,54,.10)}
+.bnum{display:inline-block;font-size:.62rem;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:#fff;background:var(--navy);padding:.3rem .6rem;margin-bottom:1rem}
+.block h3{font-family:"Playfair Display",serif;font-size:1.45rem;line-height:1.28;color:var(--navy);margin-bottom:.9rem}
+.block p{color:#33414f}
+.block p + p{margin-top:.8rem}
+.list-checks{list-style:none;margin-top:1.1rem;display:grid;gap:.85rem}
+.list-checks li{position:relative;padding-left:2rem;color:#33414f}
+.list-checks li::before{content:"✓";position:absolute;left:0;top:.05rem;color:var(--red);font-weight:800}
+.list-checks b{color:var(--navy)}
+.hand-note{font-family:"Caveat",cursive;font-size:1.3rem;color:var(--red);transform:rotate(-1.2deg);display:inline-block;margin-top:1rem}
+
+.frame{background:#fff;padding:10px;border:1px solid var(--line);box-shadow:0 16px 34px rgba(12,31,54,.12)}
+.main-fig{position:sticky;top:calc(var(--head-h) + 26px)}
+.main-fig .frame{overflow:hidden}
+.main-fig img{aspect-ratio:4/4.6;object-fit:cover;width:100%;animation:kb 18s ease-in-out infinite alternate}
+@keyframes kb{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-1.5%,1.5%)}}
+.main-fig figcaption{font-family:"Caveat",cursive;font-size:1.25rem;color:var(--muted);padding:.7rem .3rem 0;text-align:right}
+
+/* слот для будущих изображений */
+.slot{position:relative;border:1.5px dashed #a9bdd2;background:repeating-linear-gradient(45deg,#f6f9fc 0 10px,#eef4fa 10px 20px);
+  display:flex;align-items:center;justify-content:center;overflow:hidden;margin-top:1.4rem;min-height:130px}
+.slot img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+.slot-hint{font-size:.66rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:#8aa0b6;display:flex;align-items:center;gap:.6rem}
+.slot-hint::before{content:"✚";font-size:1rem;color:var(--red)}
+.slot.captioned figcaption{position:absolute;left:0;right:0;bottom:0;background:rgba(12,31,54,.72);color:#fff;font-size:.72rem;padding:.4rem .8rem;text-align:center}
+.polaroid{background:#fff;padding:10px 10px 8px;box-shadow:0 14px 30px rgba(12,31,54,.16);transform:rotate(-2.5deg);width:min(320px,80%);margin-top:1.6rem;transition:transform .5s var(--ease)}
+.polaroid:hover{transform:rotate(0deg) scale(1.02)}
+.polaroid img{aspect-ratio:4/3;object-fit:cover}
+.polaroid figcaption{font-family:"Caveat",cursive;font-size:1.2rem;text-align:center;color:var(--ink);padding-top:.5rem}
+
+/* ================= РАЗДЕЛ 2 ================= */
+.s2-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:3rem;align-items:start;margin-top:2.6rem}
+.s2-fig .frame img{aspect-ratio:1/1;object-fit:cover;width:100%;animation:kb 20s ease-in-out infinite alternate-reverse}
+.s2-fig{position:sticky;top:calc(var(--head-h) + 26px)}
+.fact{display:grid;grid-template-columns:86px 1fr;gap:1.3rem;background:rgba(255,255,255,.72);border:1px solid rgba(12,31,54,.10);
+  padding:1.6rem;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.fact:hover{transform:translateY(-4px);box-shadow:0 16px 34px rgba(12,31,54,.12)}
+.fact-num{font-family:"Playfair Display",serif;font-weight:800;font-size:2.6rem;line-height:1;color:var(--red);border-right:1px solid rgba(12,31,54,.14);padding-right:1rem}
+.fact h4{font-size:1.05rem;color:var(--navy);margin-bottom:.4rem}
+.fact .tag{display:inline-block;font-size:.6rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;background:var(--navy);color:#fff;padding:.22rem .5rem;margin-bottom:.5rem}
+.fact p{font-size:.95rem;color:#33414f}
+.plan{list-style:none;counter-reset:step;display:grid;gap:.9rem;margin-top:1rem}
+.plan li{counter-increment:step;position:relative;padding-left:3rem;color:#33414f}
+.plan li::before{content:counter(step);position:absolute;left:0;top:0;width:2rem;height:2rem;border:1.5px solid var(--navy);border-radius:50%;
+  display:grid;place-items:center;font-family:"Playfair Display",serif;font-weight:800;color:var(--navy)}
+
+/* ================= РАЗДЕЛ 3 ================= */
+.moments{list-style:none;margin-top:1.4rem}
+.moments li{display:grid;grid-template-columns:110px 1fr;gap:1.3rem;padding:1.2rem 0;border-top:1px solid var(--line);align-items:start}
+.moments .big{font-family:"Playfair Display",serif;font-weight:800;font-size:3rem;line-height:.95;color:var(--red)}
+.moments .big small{display:block;font-family:"Golos Text",sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-top:.3rem}
+.moments h4{font-size:1.1rem;color:var(--navy);margin-bottom:.35rem}
+.moments p{font-size:.95rem;color:#33414f}
+.moments .dual{display:flex;gap:1.1rem}
+.parts{width:100%;border-collapse:collapse;margin-top:1.6rem;font-size:.92rem}
+.parts caption{text-align:left;font-size:.68rem;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);padding-bottom:.6rem}
+.parts th{text-align:left;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:.55rem .6rem;border-bottom:2px solid var(--navy)}
+.parts td{padding:.75rem .6rem;border-bottom:1px solid var(--line);vertical-align:top}
+.parts tbody tr{transition:background .3s}
+.parts tbody tr:hover{background:#f2f7fc}
+.parts td b{color:var(--navy)}
+.parts tfoot td{font-weight:700;color:var(--navy);background:var(--paper-2);border-bottom:none}
+.threshold{margin-top:1.2rem;font-size:.85rem;background:#fff6f7;border-left:3px solid var(--red);padding:.7rem 1rem;color:#5a2430}
+
+.uni-list{list-style:none;margin-top:1.2rem;border-top:1px solid var(--line)}
+.uni-list li{display:grid;grid-template-columns:52px 1fr auto;gap:1.2rem;align-items:center;padding:1.05rem .2rem;border-bottom:1px solid var(--line);transition:background .3s,padding .3s var(--ease)}
+.uni-list li:hover{background:#f2f7fc;padding-left:.8rem}
+.uni-rank{font-family:"Playfair Display",serif;font-weight:800;font-size:1.4rem;color:#9db4cc}
+.uni-list h4{font-size:1.02rem;color:var(--navy)}
+.uni-majors{font-size:.85rem;color:var(--muted);margin-top:.2rem}
+.score-chip{white-space:nowrap;font-weight:800;font-size:.82rem;color:var(--navy);border:1.5px solid var(--navy);padding:.45rem .8rem;position:relative}
+.score-chip::after{content:"ориентир";position:absolute;left:0;right:0;bottom:-1.05rem;font-size:.55rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);text-align:center;font-weight:600}
+.note{margin-top:1.4rem;font-size:.83rem;color:var(--muted);border-top:1px dashed var(--line);padding-top:.9rem}
+
+.dirs{list-style:none;margin-top:1.2rem;display:grid;gap:1.15rem}
+.dirs li{padding:1.1rem 1.2rem;border:1px solid var(--line);background:#fff;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.dirs li:hover{transform:translateX(6px);box-shadow:-8px 10px 28px rgba(12,31,54,.09)}
+.dir-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.dir-head h4{font-size:1rem;color:var(--navy)}
+.dir-head b{color:var(--red);white-space:nowrap;font-size:.92rem}
+.bar{display:block;height:7px;background:#eaf1f8;margin:.65rem 0 .55rem;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--navy),var(--red));transition:width 1.3s var(--ease) .15s}
+.dirs p{font-size:.84rem;color:var(--muted)}
+.legend{font-size:.78rem;color:var(--muted);margin-top:1rem}
+
+/* ================= ПОДВАЛ ================= */
+.site-foot{background:var(--navy);color:rgba(255,255,255,.82);padding:3.4rem 0 2rem;border-top:4px solid var(--red)}
+.foot-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:2.5rem}
+.site-foot .seal{margin-bottom:1rem}
+.site-foot h5{font-family:"Playfair Display",serif;font-size:1.2rem;color:#fff;margin-bottom:.6rem}
+.site-foot p{font-size:.86rem}
+.site-foot nav{display:grid;gap:.5rem;font-size:.85rem}
+.site-foot nav a{text-decoration:none;color:rgba(255,255,255,.72);transition:color .3s,padding-left .3s var(--ease)}
+.site-foot nav a:hover{color:#fff;padding-left:.4rem}
+.foot-bottom{margin-top:2.6rem;border-top:1px solid rgba(255,255,255,.12);padding-top:1.2rem;display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;font-size:.75rem;color:rgba(255,255,255,.5)}
+.foot-bottom b{font-family:"Caveat",cursive;font-size:1.1rem;color:var(--gold);font-weight:700}
+
+#toTop{position:fixed;right:22px;bottom:22px;z-index:95;width:46px;height:46px;border-radius:50%;border:1.5px solid var(--navy);
+  background:#fff;color:var(--navy);font-size:1.1rem;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);
+  transition:opacity .4s,transform .4s var(--ease),background .3s,color .3s;box-shadow:0 10px 24px rgba(12,31,54,.18)}
+#toTop.show{opacity:1;pointer-events:auto;transform:none}
+#toTop:hover{background:var(--navy);color:#fff}
+
+@media (max-width:960px){
+  .s1-grid,.s2-grid{grid-template-columns:1fr}
+  .main-fig,.s2-fig{position:static;order:-1}
+  .sheet-body{grid-template-columns:1fr}
+  .sheet-right{border-left:none;border-top:1px dashed var(--line);padding:1.6rem 0 0}
+  .foot-grid{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .block{padding:1.4rem}
+  .badge-max{display:none}
+  .fact{grid-template-columns:1fr}
+  .fact-num{border-right:none;border-bottom:1px solid rgba(12,31,54,.14);padding:0 0 .4rem}
+  .moments li{grid-template-columns:70px 1fr}
+  .moments .big{font-size:2.1rem}
+  .uni-list li{grid-template-columns:1fr;gap:.5rem}
+  .score-chip{justify-self:start}
+  .field{grid-template-columns:1fr;gap:.2rem}
+  .stamp{right:6px;top:-14px;font-size:1.2rem}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv,.lm .w i{opacity:1!important;transform:none!important}
+  .check path{stroke-dashoffset:0}
+  .stamp{opacity:1;transform:rotate(-6deg)}
+}
+</style>
+</head>
+<body>
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ══════════════ ШАПКА: тёмно-синяя, закреплена при скролле ══════════════ -->
+<header class="site-head" id="top">
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="head-inner">
+    <a class="brand" href="#top">
+      <span class="seal">ИЛ</span>
+      <span class="brand-text">
+        <small>Мой потрясающий сайт</small>
+        <strong>ИксановаЛидия</strong>
+      </span>
+    </a>
+    <nav aria-label="Разделы">
+      <a href="#s1" data-link="s1"><i>01</i>Обо мне</a>
+      <a href="#s2" data-link="s2"><i>02</i>Неожиданные факты</a>
+      <a href="#s3" data-link="s3"><i>03</i>ЕГЭ и вузы</a>
+    </nav>
+    <span class="badge-max">ОГЭ · максимум</span>
+  </div>
+</header>
+
+<main>
+<!-- ══════════════ РАЗДЕЛ 1 · белый фон ══════════════ -->
+<section class="section white" id="s1">
+  <div class="container">
+    <div class="rv">
+      <span class="sec-label">Раздел 01 — Личное</span>
+      <h1 class="sec-title lm">Я обожаю английский язык на ЕГЭ</h1>
+      <p class="sec-sub">Меня зовут Лидия. ОГЭ по английскому я сдала на максимальный балл — и здесь я рассказываю, как полюбила этот экзамен и что ждет вас на ЕГЭ.</p>
+    </div>
+
+    <!-- «экзаменационный бланк» -->
+    <div class="exam-sheet rv">
+      <span class="stamp">сдано на максимум ✓<br>ОГЭ</span>
+      <div class="sheet-top">
+        <span class="doc">English Language · <b>Answer Sheet</b></span>
+        <span class="barcode" aria-hidden="true"></span>
+        <span class="form">Форма ЕГЭ-2026</span>
+      </div>
+      <div class="sheet-body">
+        <dl class="fields">
+          <div class="field"><dt>Candidate</dt><dd>ИксановаЛидия<svg class="check" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12.5 9.5 19 21 5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></dd></div>
+          <div class="field"><dt>Предмет</dt><dd>Английский язык<svg class="check" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12.5 9.5 19 21 5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></dd></div>
+          <div class="field"><dt>Результат ОГЭ</dt><dd><em>максимальный балл!</em><svg class="check" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12.5 9.5 19 21 5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></dd></div>
+          <div class="field"><dt>Цель на ЕГЭ</dt><dd><em>100 баллов — и никак иначе</em></dd></div>
+        </dl>
+        <div class="sheet-right">
+          <small>Сегодня в бланке</small>
+          <div class="scramble" id="scramble">LISTENING</div>
+          <p class="sub">пять разделов — один экзамен. Каждый из них я разберу в разделе 03 ↓</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>Listening</span><span>·</span><b>Ни пуха ни пера!</b><span>·</span><span>Reading</span><span>·</span><b>Keep calm and pass the exam</b><span>·</span><span>Use of English</span><span>·</span><b>Удачи на ЕГЭ!</b><span>·</span><span>Writing</span><span>·</span><b>Good luck!</b><span>·</span><span>Speaking</span><span>·</span>
+        <span>Listening</span><span>·</span><b>Ни пуха ни пера!</b><span>·</span><span>Reading</span><span>·</span><b>Keep calm and pass the exam</b><span>·</span><span>Use of English</span><span>·</span><b>Удачи на ЕГЭ!</b><span>·</span><span>Writing</span><span>·</span><b>Good luck!</b><span>·</span><span>Speaking</span><span>·</span>
+      </div>
+    </div>
+
+    <div class="s1-grid">
+      <div class="blocks">
+        <!-- Блок 1.1 -->
+        <article class="block rv">
+          <span class="bnum">Блок 1.1</span>
+          <h3>Я обожаю Английский язык на ЕГЭ, сдала ОГЭ по этому предмету на максимальный балл</h3>
+          <p>Для меня английский — не «ещё один предмет в расписании», а способ думать. Он появился в моей жизни давно, а в девятом классе я решила проверить себя по-настоящему и выбрала его для ОГЭ. Подготовка оказалась увлекательнее, чем я ожидала: каждый пробник — как маленькое расследование, где нужно услышать, понять и точно сформулировать.</p>
+          <p>Результат — максимальный балл. Но главное, что дал мне этот экзамен: я убедилась, что система честная. Она вознаграждает регулярность, внимательность и любовь к деталям. Теперь моя цель — ЕГЭ, и я иду к ней с тем же азартом.</p>
+          <span class="hand-note">ни пуха ни пера всем, кто сдаёт! ✦</span>
+          <!-- СЛОТ ДЛЯ ИЗОБРАЖЕНИЯ: чтобы добавить картинку, удалите строку slot-hint
+               и вставьте <img src="images/моя-картинка-11111111111111.jpg" alt="Описание"> -->
+          <figure class="slot">
+            <span class="photo2.png"> <img src="photo2.png" alt="Описание"></span>
+          </figure>
+        </article>
+
+        <!-- Блок 1.2 -->
+        <article class="block rv">
+          <span class="bnum">Блок 1.2</span>
+          <h3>Три причины моей любви</h3>
+          <ul class="list-checks">
+            <li><b>Язык логики.</b> Грамматика английского — как конструктор: правила чёткие, исключения редкие, а правильно собранное предложение радует, как решённая задача.</li>
+            <li><b>Билет в культуру.</b> Книги, сериалы, подкасты и интервью кумиров — всё в оригинале, без потери смысла в переводе.</li>
+            <li><b>Суперсила для поступления.</b> Английский открывает англоязычные программы, стажировки и международные треки в лучших вузах страны.</li>
+          </ul>
+        </article>
+
+        <!-- Блок 1.3 -->
+        <article class="block rv">
+          <span class="bnum">Блок 1.3</span>
+          <h3>Мой день подготовки к экзамену</h3>
+          <ul class="list-checks">
+            <li><b>Утро · 15 минут.</b> Десять новых слов в карточках и одна идиома — обязательно с примером из сериала.</li>
+            <li><b>День · один раздел.</b> Сегодня — аудирование, завтра — эссе. Разделы чередуются, чтобы мозг не скучал.</li>
+            <li><b>Вечер · удовольствие.</b> Серия любимого сериала в оригинале с английскими субтитрами. Тоже считается подготовкой!</li>
+          </ul>
+          <figure class="polaroid">
+            <img src="photo3.png" alt="Чашка чая и учебник английского на столе">
+            <figcaption>мой вечерний ритуал ☕</figcaption>
+          </figure>
+        </article>
+      </div>
+
+      <!-- Изображение раздела 1 -->
+      <figure class="main-fig rv">
+        <div class="frame">
+          <img src="desk.webp" alt="Рабочий стол с учебниками английского языка">
+        </div>
+        <figcaption>мой рабочий стол в сезон подготовки</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ РАЗДЕЛ 2 · светло-синий фон ══════════════ -->
+<section class="section blue" id="s2">
+  <div class="container">
+    <div class="rv">
+      <span class="sec-label">Раздел 02 — Инсайды</span>
+      <h2 class="sec-title lm">Неожиданные факты об Английском языке на ЕГЭ</h2>
+      <p class="sec-sub">Спойлер: экзамен по английскому проверяет не только английский. Вот что удивило меня больше всего.</p>
+    </div>
+
+    <div class="s2-grid">
+      <figure class="s2-fig rv">
+        <div class="frame">
+          <img src="photo1.png" alt="Лондонская телефонная будка и книги — символ английского языка">
+        </div>
+        <figcaption class="hand-note" style="text-align:right;display:block">Лондон близко — ближе, чем кажется</figcaption>
+      </figure>
+
+      <div class="blocks">
+        <!-- Блок 2.1 -->
+        <article class="block rv" style="background:rgba(255,255,255,.85)">
+          <span class="bnum">Блок 2.1</span>
+          <h3>Для письменной части могут понадобиться навыки знания истории России</h3>
+          <p>Задание с развёрнутым письменным высказыванием нередко строится вокруг тем, связанных с Россией: история страны, музеи, национальные праздники, семейные ценности, школьные предметы. Например, вам могут предложить порассуждать: <em>«Нужно ли школьникам изучать историю своей страны?»</em></p>
+          <p>Чтобы аргументированно высказаться по-английски, нужно уметь говорить о родной истории и культуре на иностранном языке. Фактически история России становится скрытым союзником на экзамене по английскому: чем шире ваш кругозор, тем убедительнее эссе и тем выше балл за содержание.</p>
+        </article>
+
+        <!-- Блок 2.2 -->
+        <article class="block rv" style="background:rgba(255,255,255,.85)">
+          <span class="bnum">Блок 2.2</span>
+          <h3>Ещё четыре факта, о которых молчат на курсах</h3>
+          <div class="facts" style="display:grid;gap:1rem;margin-top:.4rem">
+            <div class="fact">
+              <span class="fact-num">02</span>
+              <div><span class="tag">Говорение</span><h4>Вы говорите не с человеком, а с компьютером</h4>
+              <p>Устную часть сдают в аудитории с наушниками и микрофоном: голос записывает программа. Звучит пугающе, зато нет «человеческого фактора» — только вы и ваша речь.</p></div>
+            </div>
+            <div class="fact">
+              <span class="fact-num">03</span>
+              <div><span class="tag">Аудирование</span><h4>Аудио звучит только один раз</h4>
+              <p>Второго шанса переслушать не будет. Поэтому привычка слушать подкасты и интервью без пауз — не хобби, а стратегия выживания на экзамене.</p></div>
+            </div>
+            <div class="fact">
+              <span class="fact-num">04</span>
+              <div><span class="tag">Письмо</span><h4>Баллы снимают даже за вежливость</h4>
+              <p>В письме-ответе важно всё: правильное обращение, благодарность за полученное письмо, три точных вопроса и корректная подпись. Одна пропущенная запятая — и часть баллов уходит.</p></div>
+            </div>
+            <div class="fact">
+              <span class="fact-num">05</span>
+              <div><span class="tag">Лексика</span><h4>Одна буква решает всё</h4>
+              <p>Ответы вписываются в клеточки бланка, и малейшая ошибка в букве обнуляет задание. Списывайте внимательнее, чем на самой строгой диктанте.</p></div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Блок 2.3 -->
+        <article class="block rv" style="background:rgba(255,255,255,.85)">
+          <span class="bnum">Блок 2.3</span>
+          <h3>Что с этим делать: мой мини-план</h3>
+          <ol class="plan">
+            <li><b>Соберите «русскую папку»</b> — 20 фактов об истории и культуре России, которые вы умеете пересказать по-английски. Это ваша страховка для письменной части.</li>
+            <li><b>Тренируйте уши каждый день</b> — подкасты и видео без пауз и перемотки приучают к формату «одно прослушивание — один ответ».</li>
+            <li><b>Выучите шаблоны вежливости наизусть</b> — обращения, благодарности и подписи должны отскакивать от зубов, чтобы не терять баллы на оформлении.</li>
+          </ol>
+          <figure class="slot captioned">
+            <img src="photo4.png" alt="Карандаши и экзаменационный бланк">
+            <figcaption>Бланк и карандаши — главное оружие на экзамене</figcaption>
+          </figure>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ РАЗДЕЛ 3 · белый фон ══════════════ -->
+<section class="section white" id="s3">
+  <div class="container">
+    <div class="rv">
+      <span class="sec-label">Раздел 03 — Структура и поступление</span>
+      <h2 class="sec-title lm">ЕГЭ по английскому: от бланка до вуза мечты</h2>
+      <p class="sec-sub">Три ключевых факта об экзамене, устройство каждого раздела и главные вузы Москвы, куда английский открывает дверь.</p>
+    </div>
+
+    <div class="blocks" style="margin-top:2.6rem">
+      <!-- Блок 3.1 -->
+      <article class="block rv">
+        <span class="bnum">Блок 3.1</span>
+        <h3>ЕГЭ по Английскому: 3 важных момента</h3>
+        <ol class="moments">
+          <li class="rv">
+            <span class="big"><span class="count" data-to="5">0</span><small>разделов</small></span>
+            <div><h4>1) Экзамен состоит из пяти разделов</h4>
+            <p>Listening (аудирование), Reading (чтение), Use of English (грамматика и лексика), Writing (письмо) и Speaking (говорение). Письменная и устная части сдаются в разные дни.</p></div>
+          </li>
+          <li class="rv">
+            <span class="big"><span class="count" data-to="100">0</span><small>баллов</small></span>
+            <div><h4>2) Результат оценивается по 100-балльной шкале</h4>
+            <p>Первичные баллы за все задания переводятся в тестовые по специальной таблице. Чем стабильнее результат, тем прозрачнее перевод — а максимум в 100 баллов вполне реален при системной подготовке.</p></div>
+          </li>
+          <li class="rv">
+            <span class="big dual"><span class="count" data-to="42">0</span><span class="count" data-to="82">0</span></span>
+            <div><h4>3) Всего в работе 42 задания, максимальный первичный балл — 82</h4>
+            <p>Каждое задание «весит» по-разному: задания на говорение и развёрнутое письмо приносят больше всего баллов, поэтому им — максимум внимания на подготовке.</p></div>
+          </li>
+        </ol>
+
+        <table class="parts">
+          <caption>Из чего состоит экзамен</caption>
+          <thead><tr><th>№</th><th>Раздел</th><th>Что внутри</th><th>Время</th></tr></thead>
+          <tbody>
+            <tr><td>1</td><td><b>Listening</b> — аудирование</td><td>диалоги и тексты на слух; аудио звучит один раз</td><td>≈ 30 мин</td></tr>
+            <tr><td>2</td><td><b>Reading</b> — чтение</td><td>тексты разных жанров: от науки до публицистики</td><td>30 мин</td></tr>
+            <tr><td>3</td><td><b>Use of English</b> — грамматика и лексика</td><td>словообразование, грамматические формы, словарный запас</td><td>40 мин</td></tr>
+            <tr><td>4</td><td><b>Writing</b> — письмо</td><td>письмо-ответ (электронное) и развёрнутое высказывание с элементами рассуждения</td><td>80 мин</td></tr>
+            <tr><td>5</td><td><b>Speaking</b> — говорение</td><td>чтение текста, ответы на вопросы, сравнение фотографий</td><td>≈ 17 мин</td></tr>
+          </tbody>
+          <tfoot><tr><td colspan="4">Итого: 42 задания · до 82 первичных баллов → перевод в 100-балльную шкалу. Письменная часть — 3 часа 10 минут.</td></tr></tfoot>
+        </table>
+        <p class="threshold">Минимальный порог для получения аттестата — 22 тестовых балла, но вузы устанавливают собственные, куда более высокие планки.</p>
+      </article>
+
+      <!-- Блок 3.2 -->
+      <article class="block rv">
+        <span class="bnum">Блок 3.2</span>
+        <h3>Ведущие вузы Москвы, где нужен английский язык</h3>
+        <p>Английский — вступительное испытание на десятках направлений. Вот вузы, о которых мечтает большинство «англичан», и ориентировочные проходные баллы за три предмета ЕГЭ по итогам прошлых лет.</p>
+        <ul class="uni-list">
+          <li><span class="uni-rank">01</span><div><h4>МГУ им. М. В. Ломоносова</h4><p class="uni-majors">Фундаментальная и прикладная лингвистика · Перевод и переводоведение · Международные отношения</p></div><span class="score-chip">≈ 350–400</span></li>
+          <li><span class="uni-rank">02</span><div><h4>МГИМО</h4><p class="uni-majors">Международные отношения · Международная журналистика · Лингвистика</p></div><span class="score-chip">≈ 310–330</span></li>
+          <li><span class="uni-rank">03</span><div><h4>НИУ ВШЭ (Высшая школа экономики)</h4><p class="uni-majors">Международные отношения · Востоковедение · Филология · Бизнес-информатика (англ. программы)</p></div><span class="score-chip">≈ 300–320</span></li>
+          <li><span class="uni-rank">04</span><div><h4>РАНХиГС</h4><p class="uni-majors">Международные отношения · Зарубежное регионоведение</p></div><span class="score-chip">≈ 275–295</span></li>
+          <li><span class="uni-rank">05</span><div><h4>МГЛУ (Лингвистический университет)</h4><p class="uni-majors">Лингвистика · Перевод и переводоведение</p></div><span class="score-chip">≈ 250–290</span></li>
+          <li><span class="uni-rank">06</span><div><h4>РУДН</h4><p class="uni-majors">Лингвистика · Международные отношения</p></div><span class="score-chip">≈ 245–280</span></li>
+          <li><span class="uni-rank">07</span><div><h4>РЭУ им. Г. В. Плеханова</h4><p class="uni-majors">Реклама и связи с общественностью · Торговое дело (англоязычные треки)</p></div><span class="score-chip">≈ 255–285</span></li>
+          <li><span class="uni-rank">08</span><div><h4>Финансовый университет</h4><p class="uni-majors">Международный бизнес · Реклама и связи с общественностью</p></div><span class="score-chip">≈ 260–290</span></li>
+        </ul>
+        <p class="note">* Цифры — ориентир по проходным баллам прошлых лет: каждый год конкурс меняется. Актуальные значения всегда проверяйте на сайте приёмной комиссии выбранного вуза.</p>
+      </article>
+
+      <!-- Блок 3.3 -->
+      <article class="block rv">
+        <span class="bnum">Блок 3.3</span>
+        <h3>На какие направления можно поступить — и с какими баллами</h3>
+        <p>Сумма баллов указана за три предмета ЕГЭ (русский + профильный + английский). Полоска показывает, насколько «высокий порог» у направления.</p>
+        <ul class="dirs">
+          <li class="rv"><div class="dir-head"><h4>Лингвистика и перевод</h4><b>250–340</b></div><span class="bar"><i data-w="74%"></i></span><p>МГЛУ, МГУ, ВШЭ — мечта переводчика и преподавателя.</p></li>
+          <li class="rv"><div class="dir-head"><h4>Международные отношения</h4><b>290–360</b></div><span class="bar"><i data-w="86%"></i></span><p>МГИМО, МГУ, ВШЭ: конкурс традиционно один из самых высоких в стране.</p></li>
+          <li class="rv"><div class="dir-head"><h4>Журналистика и международная журналистика</h4><b>300–370</b></div><span class="bar"><i data-w="89%"></i></span><p>Плюс творческое испытание: эссе и портфолио тоже считают.</p></li>
+          <li class="rv"><div class="dir-head"><h4>Зарубежная филология и востоковедение</h4><b>270–340</b></div><span class="bar"><i data-w="79%"></i></span><p>ВШЭ, МГУ, ИСАА — язык плюс культура и история региона.</p></li>
+          <li class="rv"><div class="dir-head"><h4>Экономика и бизнес-информатика (англ. программы)</h4><b>260–320</b></div><span class="bar"><i data-w="76%"></i></span><p>ВШЭ, РЭУ, Финуниверситет: часть курсов читается на английском.</p></li>
+          <li class="rv"><div class="dir-head"><h4>Реклама и связи с общественностью</h4><b>260–310</b></div><span class="bar"><i data-w="73%"></i></span><p>РЭУ, Финуниверситет, РУДН — креатив и коммуникации.</p></li>
+          <li class="rv"><div class="dir-head"><h4>Педагогика: иностранные языки</h4><b>225–280</b></div><span class="bar"><i data-w="63%"></i></span><p>Отличный старт для тех, кто хочет учить так же вдохновлённо, как учили меня.</p></li>
+          <li class="rv"><div class="dir-head"><h4>Гостиничное дело и туризм</h4><b>215–265</b></div><span class="bar"><i data-w="58%"></i></span><p>Английский здесь — рабочий инструмент каждый день.</p></li>
+        </ul>
+        <p class="legend">Английский чаще всего — третий предмет по выбору; рядом с ним вузы обычно ждут русский язык и профильную дисциплину (история, обществознание, математика или литература).</p>
+      </article>
+    </div>
+
+    <!-- Изображение раздела 3 -->
+    <figure class="main-fig rv" style="position:relative;top:auto;max-width:920px;margin:3rem auto 0">
+      <div class="frame">
+        <img src="photo5.png" alt="Студенты перед зданием университета в Москве" style="aspect-ratio:12/6.4">
+      </div>
+      <figcaption>тот самый момент, когда «сдано» превращается в «зачислена»</figcaption>
+    </figure>
+  </div>
+</section>
+</main>
+
+<!-- ══════════════ ПОДВАЛ ══════════════ -->
+<footer class="site-foot">
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <span class="seal">ИЛ</span>
+        <h5>Мой потрясающий сайт · ИксановаЛидия</h5>
+        <p>Учу, сдаю и обожаю английский. Здесь — мой путь от максимального ОГЭ к стобалльному ЕГЭ и вузу мечты.</p>
+      </div>
+      <nav aria-label="Навигация по разделам">
+        <a href="#s1">01 · Обо мне и ОГЭ</a>
+        <a href="#s2">02 · Неожиданные факты</a>
+        <a href="#s3">03 · ЕГЭ и поступление</a>
+      </nav>
+      <div>
+        <h5>Кстати</h5>
+        <p>Фотографии на странице — временные заглушки: их легко заменить на свои, инструкция прилагается к коду. И помните: экзамен любит подготовленных. ✦</p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 ИксановаЛидия · все разделы сданы и проверены</span>
+      <b>Good luck with your exams!</b>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" aria-label="Наверх">↑</button>
+
+<script>
+(function(){
+  const RM = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* --- шапка: тень + прогресс + кнопка «наверх» --- */
+  const head = document.querySelector('.site-head'),
+        bar  = document.getElementById('progressBar'),
+        toTop= document.getElementById('toTop');
+  function onScroll(){
+    const y = window.scrollY,
+          h = document.documentElement.scrollHeight - window.innerHeight;
+    head.classList.toggle('scrolled', y > 8);
+    bar.style.width = (h > 0 ? (y / h * 100) : 0) + '%';
+    toTop.classList.toggle('show', y > 500);
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener('click', () => window.scrollTo({top:0, behavior: RM ? 'auto' : 'smooth'}));
+
+  /* --- заголовки: разбивка на слова для построчного появления --- */
+  document.querySelectorAll('.lm').forEach(t => {
+    const words = t.textContent.trim().split(/\s+/);
+    t.innerHTML = words.map(w => '<span class="w"><i>' + w + '</i></span>').join(' ');
+    t.querySelectorAll('.w i').forEach((el, i) => el.style.transitionDelay = (i * 55) + 'ms');
+  });
+
+  /* --- счётчики --- */
+  function runCounter(el){
+    const to = +el.dataset.to;
+    if (RM){ el.textContent = to; return; }
+    const t0 = performance.now(), dur = 1100;
+    (function tick(now){
+      const p = Math.min((now - t0) / dur, 1);
+      el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3)));
+      if (p < 1) requestAnimationFrame(tick);
+    })(t0);
+  }
+
+  /* --- полоски баллов --- */
+  function fillBar(li){ const i = li.querySelector('.bar i'); if (i) i.style.width = i.dataset.w; }
+
+  /* --- появление при прокрутке --- */
+  const targets = document.querySelectorAll('.rv');
+  if (RM){
+    targets.forEach(t => t.classList.add('in'));
+    document.querySelectorAll('.count').forEach(el => el.textContent = el.dataset.to);
+    document.querySelectorAll('.dirs li').forEach(fillBar);
+  } else {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        e.target.classList.add('in');
+        e.target.querySelectorAll('.count').forEach(runCounter);
+        if (e.target.matches('.dirs li')) fillBar(e.target);
+        io.unobserve(e.target);
+      });
+    }, {threshold:.18, rootMargin:'0px 0px -6% 0px'});
+    targets.forEach(t => io.observe(t));
+  }
+
+  /* --- активный пункт меню --- */
+  const links = document.querySelectorAll('.site-head nav a');
+  const secIO = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      links.forEach(a => a.classList.toggle('active', a.dataset.link === e.target.id));
+    });
+  }, {rootMargin:'-40% 0px -55% 0px'});
+  document.querySelectorAll('main section').forEach(s => secIO.observe(s));
+
+  /* --- «расшифровка» разделов экзамена в бланке --- */
+  const scEl = document.getElementById('scramble');
+  const words = ['LISTENING','READING','USE OF ENGLISH','WRITING','SPEAKING'];
+  const CH = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ#%*';
+  let wi = 0;
+  function scrambleTo(word){
+    let frame = 0; const total = 16;
+    const t = setInterval(() => {
+      frame++;
+      let out = '';
+      for (let i = 0; i < word.length; i++){
+        out += (i < (frame / total) * word.length) ? word[i] : CH[Math.random() * CH.length | 0];
+      }
+      scEl.textContent = out;
+      if (frame >= total){ scEl.textContent = word; clearInterval(t); }
+    }, 42);
+  }
+  if (!RM){
+    setInterval(() => { wi = (wi + 1) % words.length; scrambleTo(words[wi]); }, 2700);
+  }
+})();
+</script>
+</body>
+</html>
