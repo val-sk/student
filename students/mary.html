@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Потрясающий сайт Марии об обществознании</title>
+    <style>
+        /* === Общие стили === */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #4a4a4a;
+            background-color: #faf8f5;
+        }
+
+        /* === ШАПКА (тёплый тёмно-синий, липкая) === */
+        header {
+            background: linear-gradient(135deg, #1a3a6e 0%, #2a4a8e 100%);
+            color: white;
+            padding: 22px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(26, 58, 110, 0.25);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        header h1 {
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+            padding: 6px 14px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        header nav a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* === Общие стили разделов === */
+        section {
+            padding: 60px 40px;
+            min-height: 80vh;
+        }
+
+        section h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-align: center;
+            color: #1a3a6e;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: #e8935a;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+
+        /* === Фон разделов === */
+        #section1 {
+            background-color: #fdf9f3;
+        }
+
+        #section2 {
+            background-color: #dceaf2;
+        }
+
+        #section3 {
+            background-color: #fdf9f3;
+        }
+
+        /* === Изображение === */
+        .section-image {
+            display: block;
+            width: 100%;
+            max-width: 900px;
+            height: 350px;
+            object-fit: cover;
+            margin: 0 auto 40px auto;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(26, 58, 110, 0.15);
+        }
+
+        /* === Три текстовых блока === */
+        .text-blocks {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .text-block {
+            background-color: #ffffff;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+            border-top: 3px solid #e8935a;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .text-block:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 10px 30px rgba(26, 58, 110, 0.15);
+        }
+
+        .text-block h3 {
+            color: #1a3a6e;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .text-block p {
+            font-size: 16px;
+            color: #5a5a5a;
+        }
+
+        /* === БЛОК ОПРОСА === */
+        .poll-section {
+            background: linear-gradient(135deg, #fdf9f3 0%, #f5ecdc 100%);
+            padding: 60px 40px;
+        }
+
+        .poll-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 10px 35px rgba(26, 58, 110, 0.12);
+            border-top: 5px solid #e8935a;
+        }
+
+        .poll-container h2 {
+            color: #1a3a6e;
+            font-size: 28px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .poll-subtitle {
+            text-align: center;
+            color: #777;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+
+        .poll-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 25px;
+        }
+
+        .poll-option {
+            display: flex;
+            align-items: center;
+            padding: 14px 18px;
+            border: 2px solid #e5e5e5;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            background-color: #fdf9f3;
+        }
+
+        .poll-option:hover {
+            border-color: #e8935a;
+            background-color: #fff4ec;
+            transform: translateX(5px);
+        }
+
+        .poll-option input[type="radio"] {
+            margin-right: 12px;
+            width: 18px;
+            height: 18px;
+            accent-color: #e8935a;
+            cursor: pointer;
+        }
+
+        .poll-option label {
+            cursor: pointer;
+            flex: 1;
+            font-size: 16px;
+            color: #4a4a4a;
+        }
+
+        .poll-option input[type="radio"]:checked ~ label {
+            color: #1a3a6e;
+            font-weight: 600;
+        }
+
+        .poll-option.selected {
+            border-color: #e8935a;
+            background-color: #fff4ec;
+        }
+
+        .poll-button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #e8935a 0%, #d87d45 100%);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 17px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(232, 147, 90, 0.35);
+        }
+
+        .poll-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(232, 147, 90, 0.5);
+        }
+
+        .poll-button:active {
+            transform: translateY(0);
+        }
+
+        .poll-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            box-shadow: none;
+        }
+
+        /* Результаты опроса */
+        .poll-results {
+            display: none;
+            margin-top: 25px;
+        }
+
+        .poll-results.show {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-item {
+            margin-bottom: 14px;
+        }
+
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            font-size: 15px;
+            color: #1a3a6e;
+            font-weight: 500;
+        }
+
+        .result-bar {
+            height: 10px;
+            background-color: #f0ebe3;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .result-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #e8935a 0%, #f4b37e 100%);
+            border-radius: 5px;
+            width: 0;
+            transition: width 1s ease-out;
+        }
+
+        .poll-thanks {
+            text-align: center;
+            color: #1a3a6e;
+            font-size: 17px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* === Подвал === */
+        footer {
+            background: linear-gradient(135deg, #1a3a6e 0%, #2a4a8e 100%);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+        }
+
+        /* === Адаптив === */
+        @media (max-width: 600px) {
+            header { padding: 15px 20px; flex-direction: column; }
+            header nav a { margin: 5px 5px 0 5px; }
+            section { padding: 40px 20px; }
+            section h2 { font-size: 24px; }
+            .section-image { height: 220px; }
+            .poll-container { padding: 25px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА -->
+    <header>
+        <h1>Потрясающий сайт Марии об обществознании</h1>
+        <nav>
+            <a href="#section1">Раздел 1</a>
+            <a href="#section2">Раздел 2</a>
+            <a href="#section3">Раздел 3</a>
+            <a href="#poll">Опрос</a>
+        </nav>
+    </header>
+
+    <!-- РАЗДЕЛ 1 -->
+    <section id="section1">
+        <h2>Я обожаю обществознание на ЕГЭ</h2>
+        <img src="https://xn--23-kmc.xn--80aafey1amqq.xn--d1acj3b/images/events/cover/d7e712e4df0c447c6409de6eff816dd2_big.jpg" alt="Обществознание" class="section-image">
+        <div class="text-blocks">
+            <div class="text-block">
+                <h3>Почему это интересно</h3>
+                <p>Обществознание объединяет знания из экономики, права, социологии, политологии и философии. Это предмет, который помогает понять, как устроен мир вокруг нас.</p>
+            </div>
+            <div class="text-block">
+                <h3>Практическая польза</h3>
+                <p>Знания из обществознания пригодятся в повседневной жизни: от понимания своих прав как гражданина до умения разбираться в экономических новостях.</p>
+            </div>
+            <div class="text-block">
+                <h3>Подготовка к экзамену</h3>
+                <p>При систематической подготовке обществознание становится одним из самых предсказуемых предметов на ЕГЭ — важно знать теорию и уметь её применять.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 2 -->
+    <section id="section2">
+        <h2>Неожиданные факты об обществознании на ЕГЭ</h2>
+        <img src="https://cdn.crimeaschool.ru/organization-260/a9416a63e3fe4cf5acbd33ce03fc3f80" alt="Факты о ЕГЭ" class="section-image">
+        <div class="text-blocks">
+            <div class="text-block">
+                <h3>Самый популярный выбор</h3>
+                <p>Обществознание ежегодно выбирают более 300 тысяч выпускников — это самый востребованный предмет по выбору для поступления в гуманитарные вузы.</p>
+            </div>
+            <div class="text-block">
+                <h3>Конституция в заданиях</h3>
+                <p>Многие задания напрямую связаны с текстом Конституции РФ. Знание основных статей даёт преимущество при решении тестовой части.</p>
+            </div>
+            <div class="text-block">
+                <h3>Эссе больше нет</h3>
+                <p>В новой структуре ЕГЭ формат эссе был заменён на развёрнутые задания с чёткой структурой ответа, что делает оценку более объективной.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛ 3 -->
+    <section id="section3">
+        <h2>ЕГЭ по обществознанию : 3 важных момента</h2>
+        <img src="https://i08.fotocdn.net/s205/e646ddbeae752160/public_pin_l/2354159078.jpg" alt="Важные моменты" class="section-image">
+        <div class="text-blocks">
+            <div class="text-block">
+                <h3>Момент 1: Теория</h3>
+                <p>Освойте базовые определения и понятия из кодификатора. Без чёткого понимания терминов невозможно правильно выполнить задания второй части.</p>
+            </div>
+            <div class="text-block">
+                <h3>Момент 2: Практика</h3>
+                <p>Регулярно решайте типовые задания из открытого банка ФИПИ. Особенно важны задания на анализ текста и составление планов.</p>
+            </div>
+            <div class="text-block">
+                <h3>Момент 3: Примеры</h3>
+                <p>Учитесь приводить конкретные примеры из истории, современности и личного опыта — именно они делают ответы развёрнутыми и получают высший балл.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ИНТЕРАКТИВНЫЙ ОПРОС -->
+    <section id="poll" class="poll-section">
+        <div class="poll-container">
+            <h2>📊 Пройди опрос!</h2>
+            <p class="poll-subtitle">Какая тема обществознания вам нравится больше всего?</p>
+            
+            <div class="poll-options" id="pollOptions">
+                <div class="poll-option" onclick="selectOption(this, 'econ')">
+                    <input type="radio" name="poll" id="opt1" value="econ">
+                    <label for="opt1">💰 Экономика</label>
+                </div>
+                <div class="poll-option" onclick="selectOption(this, 'law')">
+                    <input type="radio" name="poll" id="opt2" value="law">
+                    <label for="opt2">⚖️ Право</label>
+                </div>
+                <div class="poll-option" onclick="selectOption(this, 'pol')">
+                    <input type="radio" name="poll" id="opt3" value="pol">
+                    <label for="opt3">🏛️ Политика</label>
+                </div>
+                <div class="poll-option" onclick="selectOption(this, 'soc')">
+                    <input type="radio" name="poll" id="opt4" value="soc">
+                    <label for="opt4">👥 Социология</label>
+                </div>
+                <div class="poll-option" onclick="selectOption(this, 'phil')">
+                    <input type="radio" name="poll" id="opt5" value="phil">
+                    <label for="opt5">🤔 Философия</label>
+                </div>
+            </div>
+
+            <button class="poll-button" id="pollBtn" onclick="submitPoll()">Проголосовать</button>
+
+            <div class="poll-results" id="pollResults">
+                <p class="poll-thanks">🎉 Спасибо за ваш голос!</p>
+                <div id="resultsContainer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ПОДВАЛ -->
+    <footer>
+        <p>© 2026 Потрясающий сайт Марии об обществознании | Сделано с ❤️ к знаниям</p>
+    </footer>
+
+    <script>
+        let votes = {
+            econ: 23,
+            law: 31,
+            pol: 15,
+            soc: 18,
+            phil: 13
+        };
+
+        const names = {
+            econ: '💰 Экономика',
+            law: '⚖️ Право',
+            pol: '🏛️ Политика',
+            soc: '👥 Социология',
+            phil: '🤔 Философия'
+        };
+
+        let selectedOption = null;
+
+        function selectOption(element, value) {
+            document.querySelectorAll('.poll-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            element.classList.add('selected');
+            element.querySelector('input').checked = true;
+            selectedOption = value;
+        }
+
+        function submitPoll() {
+            if (!selectedOption) {
+                alert('Пожалуйста, выберите один из вариантов!');
+                return;
+            }
+
+            votes[selectedOption]++;
+
+            const total = Object.values(votes).reduce((a, b) => a + b, 0);
+
+            document.getElementById('pollOptions').style.display = 'none';
+            document.getElementById('pollBtn').style.display = 'none';
+
+            const container = document.getElementById('resultsContainer');
+            container.innerHTML = '';
+
+            for (const key in votes) {
+                const percent = Math.round((votes[key] / total) * 100);
+                const item = document.createElement('div');
+                item.className = 'result-item';
+                item.innerHTML = `
+                    <div class="result-header">
+                        <span>${names[key]}</span>
+                        <span>${percent}% (${votes[key]} чел.)</span>
+                    </div>
+                    <div class="result-bar">
+                        <div class="result-fill" data-percent="${percent}"></div>
+                    </div>
+                `;
+                container.appendChild(item);
+            }
+
+            const results = document.getElementById('pollResults');
+            results.classList.add('show');
+
+            setTimeout(() => {
+                document.querySelectorAll('.result-fill').forEach(bar => {
+                    bar.style.width = bar.getAttribute('data-percent') + '%';
+                });
+            }, 100);
+        }
+    </script>
+
+</body>
+</html>
